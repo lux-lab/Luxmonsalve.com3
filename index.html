@@ -1,0 +1,1673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="canonical" href="https://luxmonsalve.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lux Monsalve">
+<meta property="og:description" content="Lux Monsalve — interdisciplinary artist based in Quito, Ecuador. Works, archive, exhibitions and bio.">
+<meta property="og:url" content="https://luxmonsalve.com/">
+<meta property="og:image" content="https://luxmonsalve.com/img-landing-ceiba.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img-favicon.png"><title>Lux Monsalve</title>
+<meta name="description" content="Lux Monsalve — interdisciplinary artist. Works, archive, exhibitions and bio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#FFFFFF; --surface:#FFFFFF; --tile:#F2F0ED;
+  --ink:#2E2B28; --ink-2:#55504B; --muted:#7A736C; --rule:#E4E0DA;
+  --accent:#9A5B3A; --overlay:rgba(30,27,24,.72);
+  --display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --body:"Open Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  --gutter:clamp(16px,2.5vw,32px);
+}
+html{color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{width:100%;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.02em}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.wide{font-stretch:125%;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.thin{font-weight:200;letter-spacing:-.02em;font-stretch:100%}
+p{margin:0}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--ground) 86%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.mark{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:15px;letter-spacing:.08em;text-decoration:none;white-space:nowrap}
+.nav{display:flex;gap:clamp(12px,2.4vw,28px);font-size:12.5px;overflow-x:auto;scrollbar-width:none}
+.nav a{text-decoration:none;color:var(--ink-2);white-space:nowrap;padding-block:6px}
+.nav a:hover{color:var(--ink)}
+.menu-btn{display:none}
+@media (max-width:640px){
+  .top .wrap{height:60px;position:relative}
+  .menu-btn{display:grid;place-items:center;width:48px;height:48px;margin-right:-4px;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .menu-btn img{width:40px;height:40px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .menu-btn[aria-expanded="true"] img{transform:scale(.72)}
+  .nav{position:absolute;left:0;right:0;top:100%;display:flex;flex-direction:column;gap:0;overflow:hidden;background:var(--ground);border-bottom:1px solid var(--rule);padding-inline:var(--gutter);max-height:0;opacity:0;visibility:hidden;transition:max-height .4s cubic-bezier(.2,.7,.2,1),opacity .25s ease,visibility 0s linear .4s}
+  .top.open .nav{max-height:420px;opacity:1;visibility:visible;transition:max-height .4s cubic-bezier(.2,.7,.2,1),opacity .25s ease}
+  .nav a{font-family:var(--helv);font-size:26px;font-weight:300;letter-spacing:-.01em;color:var(--ink);padding-block:12px;border-top:1px solid var(--rule)}
+  .nav a:first-child{border-top:0}
+  .nav a[aria-current="page"]{box-shadow:none;font-weight:700}
+}
+
+/* news */
+.news{padding-block:22px 32px}
+.news-head{display:flex;justify-content:space-between;margin-bottom:14px}
+.news-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(20px,3vw,48px);align-items:stretch}
+.news-text{display:flex;flex-direction:column;justify-content:space-between;gap:28px;padding-block:8px}
+.news-body{display:grid;gap:12px;align-content:center;flex:1}
+.news-body h2{font-size:clamp(28px,4.2vw,56px);line-height:1.02}
+.news-body p{color:var(--ink-2);max-width:42ch;font-size:15.5px}
+.news-body .more{font-size:13px;color:var(--accent);text-decoration:none;width:max-content;border-bottom:1px solid currentColor}
+.news-ctl{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dots{display:flex;gap:6px}
+.dots button{width:26px;height:14px;border:0;background:none;padding:0;cursor:pointer;position:relative}
+.dots button::after{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:var(--rule)}
+.dots button[aria-current="true"]::after{background:var(--ink)}
+.btn-line{font:500 11.5px var(--body);color:var(--ink-2);background:none;border:1px solid var(--rule);padding:6px 12px;cursor:pointer}
+.btn-line:hover{border-color:var(--ink);color:var(--ink)}
+.news-img{position:relative;height:clamp(360px,calc(100vh - 190px),900px);background:var(--tile);overflow:hidden;max-width:100%}
+.news-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.news-img img.on{opacity:1}
+@media (max-width:820px){.news-grid{grid-template-columns:1fr;align-items:start}.news-img{order:-1;align-self:start;width:100%;height:75vw;max-height:560px;min-height:240px;aspect-ratio:auto}.news-img img{-webkit-transform:translateZ(0)}}
+
+/* section scaffolding */
+section.block{padding-block:clamp(56px,8vw,112px);border-bottom:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:clamp(44px,8vw,112px);line-height:.9}
+.sec-head .side{display:grid;gap:6px;justify-items:end;text-align:right;color:var(--ink-2);font-size:13.5px}
+@media (max-width:720px){.sec-head{grid-template-columns:1fr}.sec-head .side{justify-items:start;text-align:left}}
+
+/* catalogue */
+.cat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px}
+@media (max-width:900px){.cat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.cat{grid-template-columns:1fr}}
+.card{all:unset;display:grid;gap:10px;cursor:pointer}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.frame{aspect-ratio:4/5;background:var(--tile);overflow:hidden;position:relative;max-width:100%}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.card:hover .frame img{transform:scale(1.025)}
+.ph{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:10px;padding:24px;text-align:center}
+.ph .t{font-family:var(--display);font-weight:200;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--ink-2)}
+.ph .m{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.meta{display:grid;grid-template-columns:1fr auto;gap:2px 16px}
+.meta .ti{font-weight:600;font-size:14.5px}
+.meta .pr{font-family:var(--mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums}
+.meta .de{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:60;background:var(--overlay);display:grid;place-items:center;padding:16px}
+.sheet{background:var(--surface);width:min(1180px,100%);height:min(88vh,860px);display:grid;grid-template-columns:minmax(0,1fr) 320px;position:relative}
+.sheet .view{background:var(--tile);position:relative;min-height:0}
+.sheet .view img{width:100%;height:100%;object-fit:contain;padding:20px}
+.sheet aside{padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;border-left:1px solid var(--rule);overflow:auto}
+.sheet aside h3{font-size:28px;font-weight:300;line-height:1.1;margin-top:6px}
+.sheet dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:18px 0 0;font-size:13.5px}
+.sheet dt{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.sheet dd{margin:0}
+.wa{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--ground);text-decoration:none;font-size:13px;font-weight:500;padding:10px 16px;width:max-content}
+.wa:hover{background:var(--accent)}
+.x{position:absolute;top:10px;right:10px;z-index:2;width:36px;height:36px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;font-size:18px;line-height:1}
+.arrows{position:absolute;inset:auto 12px 12px auto;display:flex;gap:6px}
+.arrows button{width:38px;height:38px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;font-size:16px}
+@media (max-width:820px){.sheet{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;height:92vh}.sheet aside{border-left:0;border-top:1px solid var(--rule);padding:18px}}
+
+/* projects */
+.proj{display:grid;gap:clamp(72px,10vw,140px)}
+.spread{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,28px);align-items:start}
+.spread .txt{grid-column:span 5;display:grid;gap:16px;position:sticky;top:90px}
+.spread .imgs{grid-column:span 7;display:grid;gap:clamp(12px,1.6vw,20px)}
+.spread.rev .txt{order:2}
+.spread h3{font-size:clamp(30px,4vw,54px);line-height:.98}
+.spread .txt p{color:var(--ink-2);max-width:60ch}
+.spread .txt p+p{margin-top:-4px}
+.fig{margin:0;display:grid;gap:8px}
+.fig img{width:100%;height:auto;background:var(--tile)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,20px)}
+.pair img{aspect-ratio:1/1;object-fit:cover}
+@media (max-width:900px){.spread .txt,.spread .imgs{grid-column:1/-1;position:static}.spread.rev .txt{order:0}}
+
+.scan{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px;align-items:end;background:#8C8E86;background:linear-gradient(180deg,#9A9C93,#7E8078);color:#F4F2EE;padding:clamp(20px,4vw,56px)}
+.scan img{width:100%;height:auto}
+.scan h3{font-size:clamp(26px,3vw,40px);line-height:1}
+.scan p{font-size:14px;max-width:34ch;margin-top:12px;color:#ECEAE4}
+.scan .cap{color:#E2E0D9}
+@media (max-width:820px){.scan{grid-template-columns:1fr}}
+
+/* statement */
+.stmt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.quote{font-family:var(--display);font-stretch:75%;font-weight:700;font-style:italic;font-size:clamp(24px,2.7vw,38px);line-height:1.12;letter-spacing:-.005em}
+.quote::before{content:"\201C";display:block;font-size:2.4em;line-height:.6;margin-bottom:.15em;font-style:normal}
+.stmt-h{margin:0;padding-top:.4em}
+.bio-name{font-size:clamp(36px,5.4vw,84px);line-height:.92;letter-spacing:-.02em}
+.bio .stmt-t{max-width:34ch}
+.tp{margin:0;font-size:17px;line-height:1.8;color:var(--ink-2);max-width:62ch}
+.txt2{display:grid;gap:1.1em}
+.stmt{display:block}
+.about2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);margin-top:clamp(20px,3vw,32px)}
+.exh .one{grid-column:2 / -1;font-family:var(--display);font-size:clamp(17px,1.6vw,21px);font-weight:400;line-height:1.35}
+.exh.edu li{grid-template-columns:110px minmax(0,1fr);align-items:baseline}
+.exh.edu .yr{font-family:var(--display);font-size:clamp(20px,2vw,26px);font-weight:400;color:var(--ink);letter-spacing:-.01em}
+.exh.edu .one{grid-column:2;max-width:none;font-size:14.5px;line-height:1.5;color:var(--muted)}
+@media (max-width:720px){.exh.edu li{grid-template-columns:80px minmax(0,1fr)}}
+.edu-h{margin-top:clamp(56px,7vw,96px)}
+@media (max-width:820px){.about2{grid-template-columns:1fr}}
+.bio-long{font-size:17px;max-width:62ch}
+.stmt-t{margin:0;font-family:var(--display);font-weight:300;font-size:clamp(20px,2vw,28px);line-height:1.4;letter-spacing:-.005em;color:var(--ink);max-width:40ch}
+.stmt .long{color:var(--ink-2);font-size:16px;max-width:60ch}
+@media (max-width:820px){.stmt{grid-template-columns:1fr}}
+
+/* exhibitions */
+.exh{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.exh li{display:grid;grid-template-columns:80px minmax(0,1.3fr) minmax(0,1fr);gap:8px 24px;padding-block:18px;border-bottom:1px solid var(--rule);align-items:baseline}
+.exh .yr{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.exh .nm{font-family:var(--display);font-size:clamp(18px,1.9vw,24px);font-weight:400;line-height:1.2}
+.exh .ds{font-size:13.5px;color:var(--ink-2)}
+.exh .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-left:8px;white-space:nowrap}
+@media (max-width:720px){.exh li{grid-template-columns:56px minmax(0,1fr)}.exh .ds{grid-column:2}}
+
+/* bio */
+.bio{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:start}
+.bio .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 30%;filter:grayscale(1)}
+.bio .text{display:grid;gap:36px}
+.bio > .text .txt2{width:min(100%,74ch)}
+@media (min-width:901px){.bio{column-gap:0;align-items:stretch}.bio > .text{grid-template-rows:auto 1fr;gap:0}.bio > .text .bio-name{padding-left:clamp(24px,5vw,72px);margin:0}.bio > .text .txt2{justify-self:center;align-self:center;width:min(calc(100% - 64px),74ch);padding-block:24px}}
+.bio > .text .tp{max-width:none}
+.bio .text > p{font-size:16px;color:var(--ink-2);max-width:62ch}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--rule);padding-top:24px}
+.facts h4{margin:0 0 8px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.facts p,.facts li{font-size:13.5px}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.facts strong{font-weight:600;display:block}
+@media (max-width:900px){.bio{grid-template-columns:1fr}.bio .portrait{max-width:420px}}
+@media (max-width:560px){.facts{grid-template-columns:1fr}}
+
+
+.spread .sub{font-family:var(--display);font-weight:300;font-size:18px;color:var(--ink-2);margin-top:-8px}
+.src{font-size:13px;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;width:max-content}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0;font-size:13px;border-block:1px solid var(--rule);padding-block:10px}
+.specs dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.specs dd{margin:0;color:var(--ink)}
+.work{display:grid;gap:12px;padding-block:8px 16px}
+.work h4{margin:0;font-family:var(--display);font-stretch:125%;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:17px}
+.work p{color:var(--ink-2);font-size:14.5px;max-width:68ch}
+.pair.tall img{aspect-ratio:3/4}
+.divider{border-top:1px solid var(--ink);padding-top:14px;margin-bottom:-40px}
+.qfig{margin:0;display:grid;gap:18px}
+blockquote.quote{margin:0}
+.long{display:grid;gap:16px}
+.exh .ds a,.facts a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 45%,transparent)}
+.exh .ds a:hover,.facts a:hover{border-bottom-color:currentColor}
+
+/* Helvetica */
+:root{--helv:"Helvetica Neue",Helvetica,"Nimbus Sans","Liberation Sans",Arial,sans-serif}
+.mark.lux{font-family:var(--helv);font-stretch:normal;font-weight:700;font-size:22px;letter-spacing:.02em}
+[data-page="proyectos"] h2,[data-page="proyectos"] h3,[data-page="proyectos"] h4,[data-page="proyectos"] .sub{font-family:var(--helv);font-stretch:normal}
+[data-page="proyectos"] h3.wide{font-weight:700;letter-spacing:.01em}
+[data-page="proyectos"] .work h4{font-weight:700;letter-spacing:.02em}
+[data-page="proyectos"] .sec-head h2{font-weight:300;letter-spacing:-.03em}
+/* ===== ARCHIVO VOLUMÉTRICO — INICIO ===== */
+/* archivo volumétrico */
+.arch{position:relative;height:calc(100svh - var(--top-h,60px) - env(safe-area-inset-top,0px));min-height:440px;background:#8B8D86;color:#F4F2EE;overflow:hidden}
+#av-lienzo{position:absolute;inset:0;touch-action:pan-y;cursor:grab}
+.arch.con-objeto #av-lienzo{touch-action:none}
+#av-lienzo canvas{display:block;width:100%!important;height:100%!important}
+.av-intro{position:absolute;left:var(--gutter);bottom:clamp(20px,5vh,48px);max-width:32rem;pointer-events:none;text-shadow:0 1px 14px rgba(40,42,36,.25);transition:opacity .5s ease,transform .5s ease}
+.arch.con-objeto .av-intro{opacity:0;transform:translateY(8px)}
+.av-intro .cap{color:#E2E0D9}
+.av-intro h2{font-size:clamp(30px,4.4vw,56px);line-height:.98;margin-top:10px}
+.av-intro p{font-size:14.5px;max-width:34ch;margin-top:14px;color:#ECEAE4}
+.av-intro .av-ayuda{font-size:12.5px;max-width:40ch;margin-top:12px;opacity:.85}
+.av-indice{position:absolute;top:16px;right:var(--gutter);list-style:none;margin:0;padding:0;text-align:right;transition:opacity .4s ease}
+.av-indice button{font:inherit;font-size:13px;color:#F4F2EE;background:none;border:0;padding:5px 0;cursor:pointer;opacity:.8}
+.av-indice button:hover,.av-indice button[aria-current="true"]{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.av-indice button:disabled{opacity:.35;cursor:default;text-decoration:none}
+.av-indice .i-codigo{font-family:var(--mono);font-size:11px;letter-spacing:.06em;margin-right:6px}
+.arch.con-objeto .av-indice{opacity:0;pointer-events:none}
+.av-carga{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:80%;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.02em;pointer-events:none;color:#F4F2EE}
+.av-carga.error{background:var(--surface);color:var(--ink);padding:10px 14px}
+.av-tooltip{position:absolute;left:0;top:0;pointer-events:none;background:var(--surface);color:var(--ink);font-size:12.5px;padding:5px 9px;white-space:nowrap;z-index:3}
+.av-cedula{position:absolute;z-index:2;background:var(--surface);color:var(--ink);right:var(--gutter);top:16px;max-height:calc(100% - 32px);width:min(340px,42vw);padding:22px 24px 20px;display:flex;flex-direction:column;gap:20px;overflow-y:auto;overscroll-behavior:contain;transform:translateX(calc(100% + 48px));opacity:0;transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .3s ease}
+.av-cedula.abierta{transform:none;opacity:1}
+.av-volver{align-self:flex-start;font:500 12.5px var(--body);color:var(--ink-2);background:none;border:1px solid var(--rule);padding:6px 12px;cursor:pointer}
+.av-volver:hover{border-color:var(--ink);color:var(--ink)}
+.av-cedula h3{font-size:28px;font-weight:300;line-height:1.1;margin-top:6px}
+.av-meta{color:var(--muted);font-size:13.5px;margin-top:4px}
+.av-cedula dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:16px 0 0;font-size:13.5px}
+.av-cedula dt{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.av-cedula dd{margin:0}
+.av-desc{font-size:14px;line-height:1.6;color:var(--ink-2);margin-top:16px}
+.av-cedula .pendiente{color:var(--muted);font-style:italic;opacity:.8}
+.av-pie{border-top:1px solid var(--rule);padding-top:14px;display:grid;gap:6px;font-size:12.5px;color:var(--ink-2)}
+@media (max-width:819px){
+  .av-cedula{left:0;right:0;bottom:0;top:auto;width:auto;max-height:54%;padding:18px var(--gutter) calc(16px + env(safe-area-inset-bottom,0px));gap:14px;transform:translateY(100%)}
+  .av-cedula h3{font-size:23px}
+  .av-indice{top:12px}
+}
+/* ===== ARCHIVO VOLUMÉTRICO — FIN ===== */
+/* índice de proyectos */
+.plist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}
+@media (max-width:1100px){.plist{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:820px){.plist{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+@media (max-width:420px){.plist{grid-template-columns:1fr}}
+.pcard{display:grid;gap:12px;text-decoration:none;color:inherit}
+.pthumb{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--tile);max-width:100%}
+.pthumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.pcard:hover .pthumb img{transform:scale(1.03)}
+.pmeta{display:grid;grid-template-columns:1fr auto;gap:2px 12px;border-top:1px solid var(--ink);padding-top:10px}
+.pt{font-family:var(--helv);font-weight:700;text-transform:uppercase;letter-spacing:.01em;font-size:15px;line-height:1.2}
+.py{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pv{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
+.pback,.pnav{display:none}
+[data-page="proyectos"].detail .plist,[data-page="proyectos"].detail .sec-head{display:none}
+[data-page="proyectos"]:not(.detail) .proj{display:none}
+[data-page="proyectos"].detail .proj > article:not(.cur){display:none}
+[data-page="proyectos"].detail .spread.rev .txt{order:0}
+[data-page="proyectos"].detail .pback{display:block;margin-bottom:28px}
+.pback a{font-size:13px;text-decoration:none;color:var(--ink-2);border-bottom:1px solid var(--rule)}
+.pback a:hover{color:var(--ink);border-color:var(--ink)}
+[data-page="proyectos"].detail .pnav{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--ink);margin-top:clamp(48px,7vw,96px);padding-top:16px}
+.pnav a{display:grid;gap:4px;text-decoration:none;color:inherit;max-width:48%}
+.pnav a:last-child{text-align:right;margin-left:auto}
+.pnav .eyebrow{font-size:10.5px}
+.pnav .pt{font-size:clamp(15px,1.6vw,20px)}
+/* works */
+.wlist{border-top:1px solid var(--ink)}
+.wyear{display:grid;grid-template-columns:clamp(64px,12vw,180px) minmax(0,1fr);gap:16px;padding-block:18px 22px;border-bottom:1px solid var(--rule);align-items:start}
+.wy{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:.55em}
+.wyear ul{list-style:none;margin:0;padding:0;display:grid}
+.wt{all:unset;cursor:pointer;font-family:var(--helv);font-weight:300;font-size:clamp(24px,3.2vw,44px);line-height:1.18;letter-spacing:-.015em;color:var(--ink);transition:color .2s ease,padding .25s ease}
+.wt:hover{color:var(--accent);padding-left:.25em}
+.wt:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wpeek{position:fixed;left:0;top:0;width:220px;aspect-ratio:4/5;object-fit:cover;pointer-events:none;z-index:40;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+[data-page="works"] .sec-head h2{font-family:var(--helv);font-weight:300;letter-spacing:-.03em}
+.sheet .view{display:grid;grid-template-rows:minmax(0,1fr) auto}
+.sheet .stage{position:relative;min-height:0}
+.sheet .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:20px}
+.thumbs{display:flex;gap:8px;padding:0 20px 16px;overflow-x:auto}
+.thumbs:empty{display:none}
+.thumbs button{all:unset;display:block;cursor:pointer;flex:0 0 auto;width:56px;height:56px;opacity:.5;outline:1px solid transparent;transition:opacity .2s}
+.thumbs button[aria-current="true"]{opacity:1;outline-color:var(--ink)}
+.sheet .view .thumbs img{width:100%;height:100%;object-fit:cover;padding:0}
+.sheet aside h3{font-family:var(--helv);font-weight:300;font-size:30px;margin-top:0;padding-right:36px}
+.ced{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;margin:22px 0 0;font-size:13.5px;border-top:1px solid var(--rule);padding-top:16px}
+.ced dt{color:var(--muted);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
+.ced dd{margin:0}
+.sfoot{display:grid;gap:14px;border-top:1px solid var(--rule);padding-top:14px}
+.wnav{display:flex;justify-content:space-between;align-items:center;gap:8px}
+@media (max-width:820px){.thumbs{padding:0 12px 10px}.thumbs button{width:44px;height:44px}.sheet aside h3{font-size:24px}.ced{margin-top:12px}}
+/* landing */
+.hero{display:grid;align-items:center;padding:0;height:calc(100svh - var(--top-h,61px));overflow:hidden}
+.hero img{display:block;width:100%;max-width:100%;height:100%;object-fit:cover;object-position:50% 43%}
+/* pantallas más angostas que la foto: nunca recortar los costados */
+@media (max-aspect-ratio:1698/1000){.hero img{height:auto;object-fit:contain}}
+
+/* archivo */
+.arc .news{padding-block:0 8px}
+.arc .news-img{height:clamp(320px,64vh,760px)}
+@media (max-width:820px){.arc .news-img{height:75vw}}
+.research{margin-top:clamp(56px,8vw,112px);display:grid;gap:14px}
+/* lista de proyectos */
+.prlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.pr{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:16px 18px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.prt{font-family:var(--helv);font-weight:300;font-size:clamp(26px,3.6vw,52px);line-height:1.1;letter-spacing:-.02em;transition:color .2s ease,transform .25s ease}
+.pry{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pr:hover .prt{color:var(--accent);transform:translateX(.2em)}
+.prlist.small .prt{font-size:clamp(22px,2.6vw,36px)}
+/* detalle de proyecto */
+.pdetail .pback,.mb .pback{display:block;margin-bottom:28px}
+.pdetail .pback a,.mb .pback a{font-size:13px;text-decoration:none;color:var(--ink-2);border-bottom:1px solid var(--rule)}
+.phead{display:grid;gap:10px;margin-bottom:clamp(40px,6vw,88px)}
+.phead h2{font-family:var(--helv);font-weight:300;font-size:clamp(44px,8vw,112px);line-height:.9;letter-spacing:-.03em}
+.wk{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(20px,3vw,48px);align-items:start;padding-block:clamp(32px,5vw,72px);border-top:1px solid var(--rule)}
+.wk-imgs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.4vw,18px)}
+.wk-imgs img{width:100%;height:auto;background:var(--tile)}
+.wk-imgs img:first-child{grid-column:1/-1}
+.wk-imgs img:not(:first-child){aspect-ratio:1/1;object-fit:cover}
+.wk-ced{position:sticky;top:90px}
+.wk-ced h3{font-family:var(--helv);font-weight:300;font-size:clamp(24px,2.4vw,34px);line-height:1.1;letter-spacing:-.01em}
+.wk-rest{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:36px 32px;border-top:1px solid var(--rule);padding-top:clamp(32px,5vw,56px)}
+.wk-rest .wk-ced{position:static}
+.pnav2{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--ink);margin-top:clamp(48px,7vw,96px);padding-top:16px}
+.pnav2 a{display:grid;gap:4px;text-decoration:none;color:inherit;max-width:48%}
+.pnav2 a:last-child{text-align:right;margin-left:auto}
+.pnav2 .prt{font-size:clamp(18px,2vw,26px)}
+.wk{scroll-margin-top:70px}
+@media (max-width:820px){.wk{grid-template-columns:1fr}.wk-ced{position:static}}
+/* página de obra */
+.wpage .pback{margin-bottom:20px}
+.whead{display:grid;gap:8px;margin-bottom:clamp(20px,3vw,36px)}
+.whead h2{font-family:var(--helv);font-weight:300;font-size:clamp(28px,3.4vw,48px);line-height:1.05;letter-spacing:-.02em}
+.wgal{display:grid;gap:clamp(56px,9vw,140px)}
+.wgal figure{margin:0;height:calc(100svh - 120px);min-height:420px;display:flex;align-items:center;justify-content:center;background:var(--ground)}
+.wgal img{width:100%;height:100%;object-fit:contain}
+.wgal-empty{display:grid;place-items:center;height:50svh;background:var(--tile)}
+.wgal-empty .m{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wced{margin-top:clamp(40px,6vw,88px);max-width:720px;display:grid;gap:4px}
+.wced h3{font-family:var(--helv);font-weight:300;font-size:clamp(22px,2.2vw,30px)}
+.wced .ced{margin-top:12px}
+.wintro{margin:0 auto;justify-self:center;text-align:center;max-width:62ch;font-size:17px;line-height:1.8;color:var(--ink-2)}
+.wdesc{margin:14px 0 18px;max-width:62ch;font-size:17px;line-height:1.8;color:var(--ink-2)}
+.wced .cap{margin-top:14px}
+section.pdetail{padding-block:28px clamp(56px,8vw,112px)}
+@media (max-width:640px){.wgal{gap:48px}.wgal figure{height:auto;min-height:0;aspect-ratio:1/1}}
+.exfig{margin:clamp(48px,7vw,96px) 0 0}
+.cvh{font-family:var(--display);font-weight:300;font-size:clamp(28px,3.6vw,48px);letter-spacing:-.02em;line-height:1;margin:clamp(56px,8vw,104px) 0 clamp(20px,3vw,32px)}
+.exfig img{width:100%;max-width:712px;height:auto}
+/* works: rejilla de proyectos */
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.4vw,36px)}
+.ptile{display:grid;gap:10px;text-decoration:none;color:var(--ink)}
+.ptimg{position:relative;display:block;aspect-ratio:3/2;overflow:hidden;background:var(--tile);max-width:100%}
+.ptimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.ptov{display:grid;gap:2px}
+.ptt{font-family:var(--helv);font-weight:300;font-size:clamp(18px,1.6vw,22px);line-height:1.2;letter-spacing:-.01em}
+.pty{font-family:var(--mono);font-size:12px;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){
+  .ptile{position:relative;display:block}
+  .ptov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;background:rgba(14,13,12,.42);opacity:0;transition:opacity .35s ease}
+  .ptt{color:#fff;font-size:clamp(24px,2.6vw,40px);text-wrap:balance}
+  .pty{color:rgba(255,255,255,.8)}
+  .ptile:hover .ptov,.ptile:focus-visible .ptov{opacity:1}
+  .ptile:hover .ptimg img{transform:scale(1.02)}
+}
+@media (min-width:721px){.ptile.tall{grid-row:span 2;display:flex;flex-direction:column}.ptile.left{grid-column:1}.pgrid{grid-auto-flow:row dense}.ptile.tall .ptimg{aspect-ratio:auto;flex:1;min-height:0}.ptile.tall .ptimg img{position:absolute;inset:0}}
+@media (max-width:720px){.pgrid{grid-template-columns:1fr;gap:32px}.ptile.tall .ptimg{aspect-ratio:2/3}}
+/* materia blanca */
+.mbfig{margin:0 0 28px}
+.mbfig img{width:100%;max-height:78svh;object-fit:contain;background:#0b0b0c}
+.mbced{max-width:760px}
+.mbced a{color:var(--accent)}
+.mbvid{display:inline-grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;margin-top:28px;padding:14px 22px 14px 18px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-family:var(--helv);font-size:17px;transition:background .25s,color .25s}
+.mbvid .pl{font-size:13px;grid-row:span 2}
+.mbvid .sub{grid-column:2;font:400 11px/1.4 var(--mono);letter-spacing:.04em;color:var(--muted);transition:color .25s}
+.mbvid:hover{background:var(--ink);color:#fff}.mbvid:hover .sub{color:rgba(255,255,255,.7)}
+.vidpage{background:#0b0b0c;color:#e9e6e1;min-height:calc(100svh - var(--top-h,61px));padding-block:clamp(20px,3vw,40px) clamp(48px,6vw,80px)}
+.vidpage .pback{display:block;margin-bottom:clamp(16px,2.5vw,28px)}.vidpage .pback a{color:#cfcac3;border-bottom-color:#4a4642;font-size:13px;text-decoration:none;border-bottom:1px solid #4a4642}
+.vframe{max-width:min(100%,calc((100svh - 230px) * 16 / 9));margin:0 auto}
+.vframe{position:relative;aspect-ratio:16/9;background:#000}
+.vframe iframe,.vframe video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000}
+.vframe [hidden]{display:none}
+.vcap a{color:#cfcac3;text-decoration:none;border-bottom:1px solid #4a4642}
+.vcap{max-width:min(100%,calc((100svh - 230px) * 16 / 9));margin:18px auto 0}
+.vcap h2{margin:0;font-family:var(--helv);font-weight:300;font-size:clamp(18px,1.8vw,24px);letter-spacing:-.01em;color:#f2efea}
+.vcap p{margin:6px 0 0;font:400 11.5px/1.5 var(--mono);color:#8f8982}
+.mbgal{display:grid;gap:clamp(56px,8vw,120px);margin-top:clamp(64px,9vw,128px)}
+.mbgal figure{margin:0}
+.mbgal img{display:block;width:100%;height:auto;max-height:88svh;object-fit:contain}
+.mbgal figcaption{margin-top:14px;font:400 12px/1.5 var(--mono);color:var(--muted);max-width:760px}
+.mbgal figcaption em{font-style:normal;color:var(--ink)}
+.mbgal .mbn{text-transform:uppercase;letter-spacing:.08em}
+.mbsec{overflow-x:clip}
+.mbgal.turn figure{transform-origin:50% 50%;will-change:transform;backface-visibility:hidden}
+.mbgal.turn{gap:clamp(72px,10vw,150px)}
+/* pages */
+[data-page]:not(.on){display:none}
+.spread{scroll-margin-top:90px}
+.nav a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -1px 0 var(--ink)}
+.contact.big{font-size:clamp(17px,1.8vw,22px);gap:18px;max-width:900px}
+.contact.big .row{border-bottom:1px solid var(--rule);padding-bottom:16px}
+.contact.big .row .eyebrow{width:120px}
+.sig{border-top:1px solid var(--rule)}
+.sig .mark{font-family:var(--helv);font-stretch:normal;font-weight:700;letter-spacing:.04em}
+.sig-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px 32px}
+.sig-links{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--ink-2)}
+.sig-links a{text-decoration:none}.sig-links a:hover{color:var(--accent)}
+/* footer */
+footer{padding-block:28px 28px}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:end}
+.foot h2{font-size:clamp(40px,7vw,96px);line-height:.9}
+.contact{display:grid;gap:10px;font-size:14.5px}
+.contact .row{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.contact .row .eyebrow{width:84px}
+.copy{font:500 11px var(--mono);background:none;border:1px solid var(--rule);color:var(--muted);padding:2px 8px;cursor:pointer}
+.copy:hover{color:var(--ink);border-color:var(--ink)}
+.fine{margin-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:720px){.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark lux" href="#inicio" aria-label="Lux Monsalve — home">LUX</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><img src="img-menu-btn.gif" alt="" width="40" height="40"></button>
+    <nav class="nav" id="mainNav" aria-label="Main">
+      <a href="#works">Works</a>
+      <a href="#archivo">Archive</a>
+      <a href="#bio">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Inicio -->
+  <section class="hero" data-page="inicio" aria-label="Lux Monsalve">
+    <img src="img-landing-ceiba.jpg" alt="Lux Monsalve, Ceiba, cast aluminium, 2025">
+  </section>
+
+  <!-- Works -->
+  <section class="block" data-page="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="thin">Works</h2>
+        <div class="side"><p>2021–2026</p></div>
+      </div>
+      <div class="pgrid" id="prlist"></div>
+    </div>
+  </section>
+
+  <!-- Proyecto (detalle) -->
+  <section class="block pdetail" data-page="proyecto" id="pdetail" aria-live="polite"></section>
+
+  <!-- Archivo: noticias + archivos de investigación -->
+  <section class="block arc" data-page="archivo">
+    <div class="wrap">
+  <!-- Noticias -->
+    <div class="news" aria-label="News">
+      <div class="news-head">
+        <span class="eyebrow">News</span>
+        <span class="eyebrow" id="newsCount">01 / 03</span>
+      </div>
+      <div class="news-grid">
+        <div class="news-text">
+          <div class="news-body" aria-live="polite">
+            <span class="eyebrow" id="newsTag"></span>
+            <h2 class="thin" id="newsTitle"></h2>
+            <p id="newsDesc"></p>
+            <a class="more" id="newsLink" href="#works"></a>
+          </div>
+          <div class="news-ctl">
+            <div class="dots" id="dots"></div>
+            <div style="display:flex;gap:8px">
+              <button class="btn-line" id="prev" type="button">Previous</button>
+              <button class="btn-line" id="next" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+        <div class="news-img" id="newsImg"></div>
+      </div>
+    </div>
+      <div class="research">
+        <div class="eyebrow">Research archives</div>
+        <ul class="prlist small">
+          <li><a class="pr" href="#materia-blanca"><span class="prt">White Matter</span><span class="pry">2026</span></a></li>
+          <li><a class="pr" href="#archivo-volumetrico"><span class="prt">Volumetric Archive</span><span class="pry">2025–</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materia blanca -->
+  <section class="block mbsec" data-page="materia-blanca">
+    <div class="wrap mb">
+      <div class="pback"><a href="#archivo">← Archive</a></div>
+      <div class="sec-head"><h2 class="thin">White Matter</h2><div class="side"><p>Visual essay · 2026</p></div></div>
+      <dl class="ced mbced">
+        <dt>Title</dt><dd>Materia Blanca: la indescifrable criptografía de las cosas</dd>
+        <dt>Publication</dt><dd><em>Index, revista de arte contemporáneo</em>, vol. 11, no. 21, pp. 187–195</dd>
+        <dt>Year</dt><dd>2026</dd>
+        <dt>Links</dt><dd><a href="https://revistaindex.net/index.php/cav/article/view/715/722" target="_blank" rel="noopener">Read in Index ↗</a> · <a href="https://doi.org/10.26807/cav.v11i21.715" target="_blank" rel="noopener">DOI</a></dd>
+      </dl>
+      <a class="mbvid" href="#materia-blanca-video"><span class="pl">▶</span> Video<span class="sub">Materia Blanca — MME (Machine Mediated Events) · 4:57</span></a>
+      <div class="mbgal" aria-label="Figures">
+        <figure><img src="img-mb-fig-2-1350.webp" srcset="img-mb-fig-2-1200.webp 1200w, img-mb-fig-2-1350.webp 1350w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="1350" height="759" decoding="async" alt="Pétalo granular (Granular Petal), Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 2</span> <em>Pétalo granular</em> (Granular Petal). Altered photograph, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-3-1350.webp" srcset="img-mb-fig-3-1200.webp 1200w, img-mb-fig-3-1350.webp 1350w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="1350" height="759" decoding="async" alt="Muyuyo, Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 3</span> <em>Muyuyo</em>. Altered photograph, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-4-2560.webp" srcset="img-mb-fig-4-1200.webp 1200w, img-mb-fig-4-2560.webp 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1311" decoding="async" alt="Extracto de pétalo (Petal Extract), Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 4</span> <em>Extracto de pétalo</em> (Petal Extract). Fine art print · periodic system in Max/MSP, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-5-2560.webp" srcset="img-mb-fig-5-1200.webp 1200w, img-mb-fig-5-2560.webp 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1311" decoding="async" alt="Esencia de muyuyo (Muyuyo Essence), Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 5</span> <em>Esencia de muyuyo</em> (Muyuyo Essence). Fine art print · periodic system in Max/MSP, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-6-1350.webp" srcset="img-mb-fig-6-1200.webp 1200w, img-mb-fig-6-1350.webp 1350w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="1350" height="759" decoding="async" alt="Piel de platanillo (Platanillo Skin), Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 6</span> <em>Piel de platanillo</em> (Platanillo Skin). Altered photograph, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-7-2560.webp" srcset="img-mb-fig-7-1200.webp 1200w, img-mb-fig-7-2560.webp 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1530" decoding="async" alt="Heliconia bihai, Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 7</span> <em>Heliconia bihai</em>. Fine art print · periodic system in Max/MSP, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-8-1920.webp" srcset="img-mb-fig-8-1200.webp 1200w, img-mb-fig-8-1920.webp 1920w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="1920" height="1080" decoding="async" alt="Crisálida de seda (Silk Chrysalis), Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 8</span> <em>Crisálida de seda</em> (Silk Chrysalis). Altered photograph, 2026.</figcaption></figure>
+        <figure><img src="img-mb-fig-9-2560.webp" srcset="img-mb-fig-9-1200.webp 1200w, img-mb-fig-9-2560.webp 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1302" decoding="async" alt="Macro-digital, Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 9</span> <em>Macro-digital</em>. Fine art print · periodic system in Max/MSP, 2026.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+
+<!-- White Matter: video -->
+  <section class="vidpage" data-page="materia-blanca-video">
+    <div class="wrap">
+      <div class="pback"><a href="#materia-blanca">← White Matter</a></div>
+      <div class="vframe">
+        <iframe id="mbVimeo" loading="lazy" data-src="https://player.vimeo.com/video/1237474403?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="White Matter — MME (Machine Mediated Events)"></iframe>
+      </div>
+      <div class="vcap"><h2>Materia Blanca — MME (Machine Mediated Events)</h2><p>White Matter · Video · 2026 · 4:57 · <a href="https://vimeo.com/1237474403" target="_blank" rel="noopener">Watch on Vimeo ↗</a></p></div>
+    </div>
+  </section>
+<!-- ===== ARCHIVO VOLUMÉTRICO — INICIO ===== -->
+  <section class="arch" data-page="archivo-volumetrico" id="av-escenario" aria-label="Volumetric Archive">
+    <div id="av-lienzo"></div>
+    <div class="av-intro">
+      <span class="cap">Digital archive</span>
+      <h2 class="wide">Volumetric Archive</h2>
+      <p>A collection of 3D-scanned volumetric archives: different life forms, mineral and chemical formations seen through a digital lens.</p>
+      <p class="av-ayuda">Swipe to move through the space. Tap an object to see it up close.</p>
+    </div>
+    <ul class="av-indice" id="av-indice" aria-label="Archive objects"></ul>
+    <p class="av-carga" id="av-carga" role="status"></p>
+    <div class="av-tooltip" id="av-tooltip" hidden></div>
+    <aside class="av-cedula" id="av-cedula" hidden aria-live="polite" aria-label="Object label">
+      <button class="av-volver" id="av-volver" type="button">Back to the archive</button>
+      <div>
+        <span class="eyebrow" id="av-codigo"></span>
+        <h3 id="av-titulo"></h3>
+        <p class="av-meta" id="av-meta"></p>
+        <dl id="av-datos"></dl>
+        <p class="av-desc" id="av-desc"></p>
+      </div>
+      <div class="av-pie">
+        <p>Swipe to rotate the object. Pinch or use the scroll wheel to zoom in.</p>
+        <span class="cap" id="av-malla"></span>
+      </div>
+    </aside>
+  </section>
+<!-- ===== ARCHIVO VOLUMÉTRICO — FIN ===== -->
+
+  <!-- Bio -->
+  <section class="block" data-page="bio">
+    <div class="wrap bio">
+      <div class="portrait"><img src="img-retrato.jpg" alt="Portrait of Lux Monsalve" loading="lazy"></div>
+      <div class="text">
+        <h2 class="thin bio-name">LUX MONSALVE</h2>
+        <div class="txt2">
+          <p class="tp">My artistic practice emerges from an attentive engagement with the affective resonances of archaeological and archival objects, drawn from both Latin American and global history. I study how myth, traditional knowledge and science manifest within cultural, political and biological life, shaping not only perception but also the very tissue of bodies, human and non&#8209;human.</p>
+          <p class="tp">As an Ecuadorian artist, I work from a territory where culture and traditions are deeply informed by natural phenomena. Yet since the 18th-century French Geodesic Mission, Ecuador has been closely measured, mapped and monitored by science. Such machine-mediated research often reduces entities to fragmented data points. Engaging with the territory through data collected by sensors expands our intellectual grasp, yet the encounter loses its felt, bodily substance. My work does not mourn what is lost to measurement. Through fiber works, generative soundscapes, video and sculpture, it juxtaposes myth and science, forcing the intellectual, the mystical and the phenomenological into collision to articulate a broken language of my own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Statement -->
+  <section class="block" data-page="bio">
+    <div class="wrap stmt">
+      <h3 class="eyebrow stmt-h">About</h3>
+      <div class="about2">
+        <p class="tp">Lux Monsalve was born in Quito, Ecuador, to a Colombian-Ecuadorian family of artists and craftsmen — printmakers, painters, and art framers. He is based in Quito, where his practice remains deeply rooted in the city's craft traditions and evolving contemporary scene. Monsalve's artistic formation began in his early years, immersed in the magical thinking of Andean mythology alongside the respect he developed for the technical and philosophical nuances of the studio environment.</p>
+        <p class="tp">He holds a Bachelor's degree in Industrial Design from Emily Carr University, where he focused on "new craft" processes — combining emerging technologies with traditional knowledge. His work has been exhibited in spaces such as +Arte Galería, Punto Rojo (la Galería), arte actual FLACSO, Alianza Francesa de Quito, Teatro Nacional Sucre, Libby Leshgold Gallery, Hatch Art Gallery, and Index Arte Contemporáneo magazine. His project <em>“Haptic Memory”</em> was awarded third prize in the second edition of the Bienal Universitaria de Arte Multimedia (BUAM) in 2023, exhibited at the Centro de Arte Contemporáneo de Quito (CAC) and Museo del Cacao (MuCAO) in Guayaquil.</p>
+      </div>
+      <h3 class="cvh edu-h">Education &amp; Experience</h3>
+      <ol class="exh edu">
+        <li><span class="yr">2019–</span><span class="one">Bachelor’s degree in Industrial Design, Emily Carr University, with a focus on “new craft” processes · Vancouver</span></li>
+        <li><span class="yr">2022–</span><span class="one">Project Manager at Imaginar Casa de Arte, art framing studio · Quito</span></li>
+        <li><span class="yr">2025–</span><span class="one">Curatorial Practices and Art Handling Diploma, awarded by Ana Sokoloff · ArtNexus partnership program</span></li>
+        <li><span class="yr">2020–</span><span class="one">Printmaking, sculpture and painting assistant at Taller Monsalve, the family studio · Quito</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Exhibitions, publications, talks (inside About) -->
+  <section class="block cv" data-page="bio" id="exhibitions">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="thin">Exhibitions</h2>
+      </div>
+      <ol class="exh">
+        <li><span class="yr">2026</span><span class="nm">Reconocer</span><span class="ds">Group exhibition curated by Gabriela Moyano · Punto Rojo (la Galería), Quito · Work: <a href="#espora">胞子 / Espora</a></span></li>
+        <li><span class="yr">2026</span><span class="nm">Del miedo profundo que ahuyenta la sombra</span><span class="ds">Group exhibition curated by Saskya Fun Sang · Estudio Cerón · Work: <a href="#mecanismos-blandos">Mecanismos blandos</a></span></li>
+        <li><span class="yr">2025</span><span class="nm">Ineffable<span class="tag">Solo</span></span><span class="ds">Solo exhibition · Q-Galería, Quito · <a href="https://qgaleria.com/inefable/" target="_blank" rel="noopener">qgaleria.com ↗</a></span></li>
+        <li><span class="yr">2025</span><span class="nm">Geopoéticas expandidas</span><span class="ds">Group exhibition · Arte Actual FLACSO, Quito</span></li>
+        <li><span class="yr">2024</span><span class="nm">De cerca huele a metal mezclado, dicen que huele a planta</span><span class="ds">Sensory group exhibition of four emerging artists: Emilia Gonzales, Pedro Riofrío, Francisco Buerneo, Lux Monsalve · Punto Rojo (la Galería), Quito</span></li>
+        <li><span class="yr">2023</span><span class="nm">Haptic Memory<span class="tag">Third prize</span></span><span class="ds">Bienal Universitaria de Arte Multimedia (BUAM), curated by Doreen Ríos · Centro de Arte Contemporáneo de Quito and Museo del Cacao (MuCAO), Guayaquil · Review in <a href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener">Artishock ↗</a></span></li>
+        <li><span class="yr">2022</span><span class="nm">Lucrecia Dalt — Isla Saturno</span><span class="ds">Interactive light and visuals installation · Teatro Nacional Sucre, Quito</span></li>
+        <li><span class="yr">2021</span><span class="nm">Intimacy</span><span class="ds">Interactive installation in the group exhibition “BODY” · Hatch Art Gallery, Vancouver</span></li>
+        <li><span class="yr">2020</span><span class="nm">Neblina</span><span class="ds">Live-processing installation with Fidel Eljuri and Zoroxxe · Media Agua, Quito</span></li>
+        <li><span class="yr">2020</span><span class="nm">Realidades no ordinarias</span><span class="ds">Launch of Bardo José’s interactive album; video game and live-processing installation · +Arte Galería, Quito</span></li>
+        <li><span class="yr">2019</span><span class="nm">Instrumentos inter-especie</span><span class="ds">International group exhibition “Growing Rituals” · Libby Leshgold Gallery, Vancouver</span></li>
+      </ol>
+      <h3 class="cvh">Publications</h3>
+      <ol class="exh">
+        <li><span class="yr">2026</span><span class="nm">White Matter</span><span class="ds">Visual essay “Materia Blanca: la indescifrable criptografía de las cosas” · <em>Index, revista de arte contemporáneo</em>, vol. 11, no. 21, pp. 187–195 · <a href="https://revistaindex.net/index.php/cav/article/view/715/722" target="_blank" rel="noopener">Read ↗</a> · <a href="https://doi.org/10.26807/cav.v11i21.715" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="yr">2025</span><span class="nm">Ineffable</span><span class="ds">Exhibition text · Q-Galería, Quito · <a href="https://qgaleria.com/inefable/" target="_blank" rel="noopener">Read ↗</a></span></li>
+        <li><span class="yr">2023</span><span class="nm">Espacios líquidos: políticas de la pantalla</span><span class="ds">Review featuring <em>Haptic Memory</em> · Artishock Revista · <a href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener">Read ↗</a></span></li>
+        <li><span class="yr"></span><span class="nm">UFF Arte Itinerante</span><span class="ds">Publication</span></li>
+        <li><span class="yr"></span><span class="nm">Geopoéticas Expandidas</span><span class="ds">Publication</span></li>
+      </ol>
+      <h3 class="cvh">Artist Talks</h3>
+      <ol class="exh">
+        <li><span class="yr">2026</span><span class="nm">Litofonías</span><span class="ds">Artist talk · Punto Rojo (la Galería), Quito</span></li>
+        <li><span class="yr"></span><span class="nm">Lo inefable</span><span class="ds">Talk · Sala Sur, Arte Actual FLACSO, Quito</span></li>
+        <li><span class="yr">2021</span><span class="nm">Sinestesia de las emociones</span><span class="ds">Artist talk following the solo exhibition · Alianza Francesa de Quito</span></li>
+      </ol>
+      <figure class="exfig"><img src="img-landing.jpg" width="1424" height="752" alt="Installation view of an exhibition by Lux Monsalve" loading="lazy"></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="sig">
+  <div class="wrap">
+    <div class="sig-row">
+      <a class="mark" href="#inicio">LUX MONSALVE</a>
+      <div class="sig-links">
+        <a href="mailto:luxmonsalvesosa@gmail.com">luxmonsalvesosa@gmail.com</a>
+        <a href="https://www.instagram.com/luxmonsalve/" target="_blank" rel="noopener">Instagram @luxmonsalve</a>
+      </div>
+    </div>
+    <div class="fine"><span class="cap">© Lux Monsalve · Interdisciplinary artist · Quito, Ecuador</span><span class="cap">Work available through Imaginar Casa de Arte</span></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- WORKS por proyecto (edita aquí; la primera foto es la principal) ---------- */
+const PROJECTS = [
+  {id:"reconocer", t:"Reconocer", y:"2026", v:"Group exhibition curated by Gabriela Moyano · Punto Rojo (la Galería), Quito", works:[
+    {id:"espora", t:"胞子 / Espora", y:2026, intro:"This piece traces the history of written language and explores the hidden forces behind similar epistemological developments that emerged independently in different parts of the world.", desc:"Espore presents itself as an abstract sign: a semiotic code. Its materiality, which recalls that of a meteorite, underscores the tension between the biological and the artificial. The piece emerges from the speculation that certain spores may have arrived from outer space and developed on Earth. In <em>Food of the Gods</em>, Terence McKenna takes this idea further. He proposes that eating mushrooms throughout human history acted as a catalyst for evolutionary transformations, both cognitive and physical, that opened paths that define us as a species today. Spore is thus a nod to that possible missing link: a sign that represents a genetic code in perpetual mutation.", m:"Steel", d:"87 × 51 × 18 cm", img:["img-espora-sala-2.jpg","img-espora-detalle-2.jpg","img-espora-publico.jpg","img-espora-textura.jpg"]},
+  ]},
+  {id:"del-miedo-profundo", t:"Del Miedo Profundo que Ahuyenta la Sombra", y:"2026", v:"Group exhibition · Estudio Cerón · Curated by Saskya Fun Sang", works:[
+    {id:"mecanismos-blandos", t:"Mecanismos blandos", y:2026, notes:{2:"A doll holds stories of care, fear, pain and uncertainty, all aspects inherent to human experience."}, intro:"Objects —archaeological pieces, writings and instruments— are portals for understanding hidden histories or realities lost to oblivion. A series of similarities between the myths and stylizations of the ancient objects of the East and Latin America reveals remarkable similarities between these two worlds.", desc:"<em>Mecanismos blandos</em> (Soft Mechanisms) draws a parallel between the Japanese practice of amigurumi and the Guatemalan worry doll as animist objects rooted in magical thinking. Antecedents of these practices can be traced to the Venus figurines of Valdivia, clay figures that have been linked to healing rituals, and Jōmon statues. The custom of making dolls for one’s children in times of hardship and suffering, a custom sustained above all by mothers, opens comforting spaces for vulnerability. The poetic gesture of shaping these figures in felt and materially decomposing their structure seeks the magical element that gives life to these inanimate beings. The piece proposes thinking of these objects as emotional prosthetics: soft bodies that accompany fragility and find a way to inhabit what cannot always be named.", tall:1, cover:"img-mecanismos-blandos-vertical.jpg", m:"Sheep’s wool felt", img:["img-mecanismos-blandos-detalle.jpg","img-mecanismos-blandos-pieza.jpg","img-mecanismos-blandos-figura.jpg"]},
+  ]},
+  {id:"inefable", t:"Ineffable", y:"2025", v:"Solo exhibition · Q-Galería, Quito", works:[
+    {id:"flor-de-agave", t:"Flor de agave", y:2025, intro:"<em>Flor de agave</em> is an assemblage of hand-fabricated agave paper with stainless steel sheet cutouts. This piece illustrates the belief that both the agave flower and chawarmishki — the sweet, nutritious sap produced by the plant — are the material manifestation of the plant’s spirit.", desc:"As it blossoms, the agave redirects the energy previously used to synthesize chawarmishki toward the development of its flowers; the bloom symbolizes the end of the xerophyte’s life cycle, as if announcing its own death. The stainless steel figure in the center of the composition derives from a 3D scan of the flower itself, translated into a two-dimensional silhouette. The use of stainless steel is a deliberate choice — it places the object within a contemporary material language, embracing ancestral traditions in a post-industrial and predominantly scientific-thinking context.", m:"Handmade agave paper and stainless steel", d:"240 × 180 cm", img:["img-flor-agave.jpg","img-flor-agave-detalle.jpg"]},
+    {id:"luz-liquida", t:"Luz líquida", y:2025, intro:"<em>Luz líquida</em> references a sophisticated poetic understanding of biological processes in the oral traditions of the Chuspiyaku culture.", desc:"“Liquid light” is the colloquial name for chawarmishki — the sap of the agave. Its flavor differs depending on whether the sap is synthesized during daylight or under moonlight. This variation deepens once the chawarmishki undergoes fermentation and transforms into a wine called warango. These nuances are experienced not only in taste but in the alcoholic stimulus — two different recipes distinguished by a single cosmic ingredient.", cover:"img-luz-liquida-puas.jpg", m:"Agave paper, agave spikes and stainless steel", d:"110 × 80 cm", img:["img-luz-liquida.jpg","img-luz-liquida-puas.jpg"]},
+    {id:"murmullo", t:"Murmullo", y:2025, intro:"<em>Murmullo</em> is an installation that orients the viewer toward inhabiting space through an intimate, corporeal dialogue. This futuristic-looking artifact entices the audience to approach and come into contact.", desc:"It resembles the contour of a chair’s backrest, suggesting some form of dorsal engagement. A generative granular system built in Max/MSP and RNBO — programming languages that run on nodes — processes acoustic data collected from inside an agave plant. This real-time audio synthesis mechanism feeds into a transducer, which transforms the audio signals into vibration, inducing a haptic experience. The result is what he calls a cognitive blasphemy — a questioning of whether the very systems we use to measure or behold natural phenomena might widen the gap between raw sensory experience and the signals or codes we can decipher. In this reduction, entities are constrained to fragmented data points. Consider a forest translated into temperature gradients, soil pH and birdcall spectrograms: our intellectual grasp expands, yet many times the encounter loses its felt, bodily substance. His work does not mourn what is lost to measurement — it forces the intellectual, the mystical and the phenomenological into collision to articulate a broken language of his own.", tall:1, left:1, cover:"img-murmullo-vertical.jpg", m:"Installation: stainless steel tube, transducer, generative granular synthesis and agave sound samples", du:"Generative, no time limit", img:["img-murmullo-sala.jpg","img-murmullo-1.jpg","img-murmullo-2.jpg","img-murmullo.jpg"]},
+    {id:"cartografias-divinas", t:"Cartografías divinas I–III", y:2025, intro:"This body of work stems from a series of reflections on vulnerability and uncertainty. It addresses global warming and human interventions in the environment as an intrinsic element of post-industrial life. After the forest fires in Quito in 2024, in desolate, charred landscapes, Monsalve finds in the pencos (agave plants), surrounded by ashes, a symbol of biological adaptation and cultural resistance that opens a space for fiction.", desc:"<em>Cartografías divinas</em> focuses on the territory of Chuspiyaku, seeking to raise questions about the fragility of the material and cultural memory of this place. The rhythm of modernity is aggressively modifying the periodic phases and cycles of life on earth, such as the blooming, hibernation, migration and propagation of living beings. This phenomenon leads us to see the world as if it were a new, unexplored territory. The artist highlights the epistemological junctures that arise from western narratives, creating maps and instruments that dismantle established conventions and paradigms, asking whether we need new models to navigate and make sense of the current human and environmental condition.", m:"Ash, charcoal, fire dust, sand, spines and stainless steel", d:"I: 75 × 170 cm · II and III: 70 × 40 cm", img:["img-cartografia-1.jpg","img-cartografia-2-3.jpg","img-cartografia-detalle.jpg","img-cartografia-detalle-2.jpg"]},
+    {id:"chawarquero", t:"Chawarquero", y:2025, intro:"<em>Chawarquero</em> is a word with two primordial meanings: it is the name of the heart of the agave plant from which a long stem grows upward, and also the name given to the person who harvests the chawarmishki and holds the knowledge of how to do it.", desc:"Agave leaves end in spikes pointing in all directions, which the Chuspiyaku cosmovision interprets as antennas — sending and receiving signals from different dimensions. The sculpture is made from an agave trunk; suspended above it is a hand-carved wooden object of unusual form, achieved through the repetition of the same gesture performed inside the agave’s base when collecting chawarmishki. It evokes an interdimensional receptor — a vessel for the immaterial truth that breathes in this interspecies communion, a wisdom that hides not in the plant alone but in the space of their quiet proximity.", m:"Wood, agave fibers and agave stem", d:"220 × 35 cm", img:["img-chawarquero.jpg","img-chawarquero-detalle.jpg"]},
+    {id:"ceiba", t:"Ceiba", y:2025, m:"Cast aluminium", d:"90 × 3 cm", img:["img-landing-ceiba.jpg"]},
+    {id:"priapo", t:"Príapo", y:2025, m:"Charcoal, ash, landscape fragments and steel", d:"120 × 170 cm", img:[]},
+    {id:"caliz", t:"Cáliz", y:2025, m:"Forged steel", d:"15 × 33 cm", img:[]},
+    {id:"puas", t:"Púas", y:2025, m:"Digital print, photogrammetry", d:"200 × 100 cm", img:[]},
+    {id:"materia-blanca-i", t:"Materia blanca I", y:2025, m:"Mixed media on paper, landscape fragments", d:"150 × 100 cm", img:[]},
+    {id:"materia-blanca-ii", t:"Materia blanca II", y:2025, m:"Mixed media on paper, mineral pigments", d:"140 × 95 cm", img:[]},
+    {id:"topografia-del-cuerpo", t:"Topografía del cuerpo", y:2025, m:"Digital graphic, photogrammetry and steel", d:"130 × 80 cm", img:[]},
+  ]},
+  {id:"de-cerca-huele-a-metal", t:"De Cerca Huele a Metal Mezclado, Dicen que Huele a Planta", y:"2024", v:"Group exhibition · Punto Rojo (la Galería), Quito", works:[
+    {id:"antofila-obra", t:"Antófila", y:2024, cover:"img-antofila-nichos.jpg", m:"Olfactory sculpture: beeswax, copper and pine (enfleurage)", img:["img-antofila-portada.jpg","img-antofila-detalle.jpg","img-antofila.jpg","img-antofila-nichos.jpg"]},
+    {id:"crisalida-obra", t:"Crisálida", y:2023, m:"Sheep’s wool felt and medicinal plants (santa maría, arrayán, rue, cedrón)", d:"80 × 75 × 60 cm", img:["img-crisalida-2.jpg","img-crisalida-1.jpg","img-crisalida-3.jpg"]},
+  ]},
+  {id:"memoria-del-tacto", t:"Haptic Memory", y:"2023", v:"BUAM · Centro de Arte Contemporáneo, Quito — Third prize", works:[
+    {id:"memoria-del-tacto-obra", t:"Haptic Memory", y:2023, m:"Interactive installation: inkjet print, live processing video and generative sound", d:"Variable dimensions (print: 90 × 120 cm)", intro:"<em>Haptic Memory</em> emerges from an archive of 3D scans of human and non-human beings. Each piece documents different aspects of contemporary everyday life: affection, intimacy, the body and spirituality take on new forms as they are recorded by different technologies.", desc:"Media such as augmented reality and platforms such as social networks challenge traditional ways of understanding the world. These new epistemes manifest in culture and possibly even in the body. Just as painting, photography and cinema each brought about a perceptual shift in their time, new media create an expanded reality that entails an ontological change. Through a work that is activated without being touched, the series offers a way to visualize this transition toward a posthuman experience.", img:["img-memoria-tacto.jpg","img-memoria-objetos.jpg","img-memoria-publico.jpg"]},
+  ]},
+  {id:"instrumentos-inter-especie", t:"Instrumentos inter-especie", y:"2021", v:"Hatch Art Gallery, Vancouver", works:[
+    {id:"instrumentos-inter-especie-obra", t:"Instrumentos inter-especie", y:2021, m:"3D-printed plaster and symbiotic colonies of bacteria and yeast", img:["img-interespecie-membrana.jpg","img-interespecie-yeso.jpg","img-interespecie-cultivo.jpg","img-interespecie-moldes.jpg","img-interespecie-cuenco.jpg"]},
+  ]},
+];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* Works: una foto por obra */
+const WORKS_ALL=PROJECTS.flatMap(p=>p.works.filter(w=>w.img.length).map(w=>({...w,cover:w.cover||w.img[0]})));
+document.getElementById('prlist').innerHTML=WORKS_ALL.map(w=>`<a class="ptile${w.tall?' tall':''}${w.left?' left':''}" href="#${w.id}"><span class="ptimg"><img src="${w.cover}" alt="${esc(w.t)}" loading="lazy"></span><span class="ptov"><span class="ptt">${esc(w.t)}</span><span class="pty">${w.y}</span></span></a>`).join('');
+
+/* Proyectos y obras: cada obra en su propia página */
+const pdetail=document.getElementById('pdetail');
+function cedHTML(w){
+  const rows=[['Year',w.y],['Medium',w.m],['Dimensions',w.d],['Duration',w.du]].filter(r=>r[1]);
+  return `<dl class="ced">${rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+}
+function navLink(href,label,txt,cls){return `<a class="${cls}" href="#${href}"><span class="eyebrow">${label}</span><span class="prt">${esc(txt)}</span></a>`;}
+function renderProject(i){
+  const p=PROJECTS[i], n=PROJECTS.length, pv=PROJECTS[(i-1+n)%n], nx=PROJECTS[(i+1)%n];
+  pdetail.innerHTML=`<div class="wrap">
+    <div class="pback"><a href="#works">← Works</a></div>
+    <header class="phead"><h2 class="thin">${esc(p.t)}</h2><p class="cap">${p.y} · ${esc(p.v)}</p></header>
+    <ul class="prlist">${p.works.map(w=>`<li><a class="pr" href="#${w.id}"><span class="prt">${esc(w.t)}</span></a></li>`).join('')}</ul>
+    <nav class="pnav2">${navLink(pv.id,'← Previous project',pv.t)}${navLink(nx.id,'Next project →',nx.t)}</nav>
+  </div>`;
+}
+function renderWork(pi,wi){
+  const p=PROJECTS[pi], w=p.works[wi], single=p.works.length===1;
+  let prevL, nextL;
+  if(single){ prevL=''; nextL=''; }
+  else { const m=p.works.length, pw=p.works[(wi-1+m)%m], nw=p.works[(wi+1)%m];
+    prevL=navLink(pw.id,'← Previous work',pw.t); nextL=navLink(nw.id,'Next work →',nw.t); }
+  const back=`<a href="#works">← Works</a>`;
+  pdetail.innerHTML=`<div class="wrap wpage">
+    <div class="pback">${back}</div>
+    <header class="whead"><h2>${esc(w.t)}</h2><p class="cap">${esc(p.t)} · ${p.y}${single?' · '+esc(p.v):''}${single?'':` · ${wi+1} / ${p.works.length}`}</p></header>
+    ${w.img.length?`<div class="wgal">${w.img.map((src,k)=>`<figure><img src="${src}" alt="${esc(w.t)}${k?', view '+(k+1):''}" loading="${k<2?'eager':'lazy'}"></figure>${k===0&&w.intro?`<p class="wintro">${w.intro}</p>`:''}${w.notes&&w.notes[k]?`<p class="wintro">${w.notes[k]}</p>`:''}`).join('')}</div>`:`<div class="wgal-empty"><span class="m">Photograph forthcoming</span></div>`}
+    <section class="wced"><h3>${esc(w.t)}</h3>${w.desc?`<p class="wdesc">${w.desc}</p>`:''}${cedHTML(w)}${single?'':`<p class="cap">${esc(p.v)}</p>`}</section>
+    ${single?'':`<nav class="pnav2">${prevL}${nextL}</nav>`}
+  </div>`;
+}
+
+/* ---------- Noticias ---------- */
+const NEWS=[
+  {tag:"Publications · 2026", title:"White Matter in Index", desc:"“Materia Blanca: la indescifrable criptografía de las cosas”, a visual essay in Index, revista de arte contemporáneo, vol. 11, no. 21.", img:"img-materia-blanca.jpg", link:"#materia-blanca", linkText:"View the archive"},
+  {tag:"Solo exhibition · 2025", title:"Ineffable", desc:"Handmade agave paper, stainless steel and sound from inside the plant. Q-Galería, Quito.", img:"img-inefable-aluminio.jpg", link:"#inefable", linkText:"View the project"},
+  {tag:"Digital archive", title:"Volumetric Archive", desc:"Life forms, mineral and chemical formations scanned in 3D. Move through the space and get close to each object.", img:"img-archivo-tardigrado.jpg", fit:"contain", link:"#archivo-volumetrico", linkText:"Enter the archive"},
+];
+const imgBox=document.getElementById('newsImg'), dots=document.getElementById('dots');
+NEWS.forEach((n,i)=>{
+  const im=document.createElement('img'); im.src=n.img; im.alt=n.title; if(n.fit){im.style.objectFit=n.fit;im.style.background='#fff';} 
+  imgBox.appendChild(im);
+  const d=document.createElement('button'); d.type='button'; d.setAttribute('aria-label',`News item ${i+1}`); d.onclick=()=>{show(i);restart();}; dots.appendChild(d);
+});
+let ni=0, timer;
+function show(i){
+  ni=i; const n=NEWS[i];
+  newsTag.textContent=n.tag; newsTitle.textContent=n.title; newsDesc.textContent=n.desc;
+  newsLink.href=n.link; newsLink.textContent=n.linkText+(n.link.startsWith('http')?' ↗':' →'); if(n.link.startsWith('http')){newsLink.target='_blank';newsLink.rel='noopener';}else{newsLink.removeAttribute('target');}
+  newsCount.textContent=`${String(i+1).padStart(2,'0')} / ${String(NEWS.length).padStart(2,'0')}`;
+  [...imgBox.children].forEach((im,k)=>im.classList.toggle('on',k===i));
+  [...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i));
+}
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function restart(){clearInterval(timer); if(!reduce) timer=setInterval(()=>show((ni+1)%NEWS.length),7000);}
+prev.onclick=()=>{show((ni-1+NEWS.length)%NEWS.length);restart();};
+next.onclick=()=>{show((ni+1)%NEWS.length);restart();};
+show(0); restart();
+
+/* ---------- Páginas ---------- */
+const PAGES=['inicio','works','archivo','archivo-volumetrico','materia-blanca','materia-blanca-video','bio'];
+const PARENT={'archivo-volumetrico':'archivo','materia-blanca':'archivo','materia-blanca-video':'archivo',proyecto:'works'};
+const TITLES={inicio:'Lux Monsalve',works:'Works — Lux Monsalve',archivo:'Archive — Lux Monsalve','archivo-volumetrico':'Volumetric Archive — Lux Monsalve','materia-blanca':'White Matter — Lux Monsalve','materia-blanca-video':'Materia Blanca — MME (Machine Mediated Events) — Lux Monsalve',exhibiciones:'Exhibitions — Lux Monsalve',bio:'About — Lux Monsalve',contacto:'Contact — Lux Monsalve'};
+const OLD={contacto:'bio',contact:'bio',exhibiciones:'bio',exhibitions:'bio',obra:'works',proyectos:'works',cartografias:'cartografias-divinas',antofila:'antofila-obra',crisalida:'crisalida-obra'};
+/* White Matter video: Vimeo first, local copy as fallback */
+let vimeoOK=false, vimeoTimer=0;
+addEventListener('message',e=>{ if(/^https:\/\/player\.vimeo\.com$/.test(e.origin)){ vimeoOK=true; clearTimeout(vimeoTimer); } });
+function useLocalVideo(){ const f=document.getElementById('mbVimeo'), v=document.getElementById('mbVideo'); if(!v) return; f.hidden=true; f.removeAttribute('src'); v.hidden=false; if(!v.src) v.src=v.dataset.src; }
+function mbVideoRoute(page){
+  const f=document.getElementById('mbVimeo'); if(!f) return;
+  if(page==='materia-blanca-video'){ if(!f.getAttribute('src')) f.src=f.dataset.src; }
+  else if(f.getAttribute('src')){ try{ f.contentWindow.postMessage(JSON.stringify({method:'pause'}),'https://player.vimeo.com'); }catch(_){} }
+}
+function route(){
+  let h=(location.hash||'').slice(1); if(OLD[h]) h=OLD[h];
+  let page='inicio', title;
+  let pi=PROJECTS.findIndex(p=>p.id===h), wi=-1;
+  if(pi<0){ pi=PROJECTS.findIndex(p=>p.works.some(w=>w.id===h)); if(pi>=0) wi=PROJECTS[pi].works.findIndex(w=>w.id===h); }
+  else wi=0;
+  if(pi>=0){ page='proyecto';
+    if(wi>=0){ renderWork(pi,wi); title=PROJECTS[pi].works[wi].t+' — Lux Monsalve'; }
+    else { renderProject(pi); title=PROJECTS[pi].t+' — Lux Monsalve'; } }
+  else if(PAGES.includes(h)) page=h;
+  document.querySelectorAll('[data-page]').forEach(sec=>sec.classList.toggle('on',sec.dataset.page===page));
+  const navPage=PARENT[page]||page;
+  document.querySelectorAll('.nav a').forEach(a=>{a.getAttribute('href')==='#'+navPage?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');});
+  document.title=title||TITLES[page];
+  if(page==='archivo') restart(); else clearInterval(timer);
+  mbVideoRoute(page);
+  window.scrollTo(0,0);
+}
+/* Menú móvil */
+const topBar=document.querySelector('.top'), menuBtn=document.getElementById('menuBtn');
+function setMenu(open){topBar.classList.toggle('open',open);menuBtn.setAttribute('aria-expanded',open);menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+menuBtn.addEventListener('click',()=>setMenu(!topBar.classList.contains('open')));
+document.querySelectorAll('#mainNav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
+document.addEventListener('click',e=>{if(topBar.classList.contains('open')&&!topBar.contains(e.target))setMenu(false);});
+addEventListener('hashchange',()=>setMenu(false));
+addEventListener('hashchange',route); route();
+/* White Matter: paso de página al desplazarse (direcciones aleatorias) */
+(function(){
+  const gal=document.querySelector('.mbgal'); if(!gal) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gal.classList.add('turn');
+  const figs=[...gal.querySelectorAll('figure')].slice(1), cur=figs.map(()=>0);   // la primera foto queda quieta
+  const ROT=7, LIFT=150, DRIFT=45, SHRINK=.2, EASE=.07;
+  const rnd=()=>({s:Math.random()<.5?-1:1, m:.75+Math.random()*.45});
+  let dirs=[];
+  const shuffle=()=>{ dirs=figs.map(()=>({in:rnd(),out:rnd()})); };
+  shuffle();
+  let raf=0;
+  function target(f){
+    const r=f.getBoundingClientRect(), vh=innerHeight;
+    const p=((r.top+r.height/2)-vh/2)/vh;          // 0 = centrada, >0 entra desde abajo, <0 sale por arriba
+    return Math.max(-1.2,Math.min(1.2,p));
+  }
+  function frame(){
+    raf=0; let moving=false;
+    if(!gal.offsetParent) return;
+    figs.forEach((f,i)=>{
+      const t=target(f); cur[i]+=(t-cur[i])*EASE; if(Math.abs(t-cur[i])>.0005) moving=true;
+      const p=cur[i], a=Math.min(Math.abs(p),1), e=a*a*(3-2*a), d=p>0?dirs[i].in:dirs[i].out;
+      const rot=d.s*d.m*ROT*e, x=d.s*Math.min(DRIFT,innerWidth*.07)*e, y=LIFT*Math.sign(p)*e;
+      f.style.transform=`translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) rotate(${rot.toFixed(3)}deg) scale(${(1-SHRINK*e).toFixed(4)})`;
+    });
+    if(moving) raf=requestAnimationFrame(frame);
+  }
+  const kick=()=>{ if(!raf) raf=requestAnimationFrame(frame); };
+  addEventListener('scroll',kick,{passive:true}); addEventListener('resize',kick);
+  addEventListener('hashchange',()=>{ if(location.hash==='#materia-blanca') shuffle(); figs.forEach((f,i)=>cur[i]=target(f)); setTimeout(kick,50); });
+  kick();
+})();
+
+/* ---------- Copiar ---------- */
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const v=b.dataset.copy;
+  const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500);};
+  try{navigator.clipboard.writeText(v).then(done,()=>{sel(b.previousElementSibling);});}catch(e){sel(b.previousElementSibling);}
+}));
+function sel(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);}
+</script>
+<script>
+/* ===== ARCHIVO VOLUMÉTRICO — INICIO ===== */
+/*
+  ARCHIVO VOLUMÉTRICO — Lux Monsalve
+  Visor 3D en WebGL2 (sin librerías externas).
+  Recorrido: arrastrar = orbitar, rueda/pellizco = acercar.
+  Objeto:    arrastrar = girar el objeto, rueda/pellizco = acercar, Esc = volver.
+*/
+window.iniciarArchivo = function (CATALOGO, ASSETS) {
+  "use strict";
+  CATALOGO = CATALOGO || [];
+  ASSETS = ASSETS || null;
+
+  const FOV = Math.PI / 4.2;
+  const FOG = [0.545, 0.553, 0.525];
+  const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const $ = (s) => document.querySelector(s);
+  const ui = {
+    stage: $("#av-escenario"), holder: $("#av-lienzo"), carga: $("#av-carga"),
+    tooltip: $("#av-tooltip"), indice: $("#av-indice"), cedula: $("#av-cedula"),
+    volver: $("#av-volver"), cCodigo: $("#av-codigo"), cTitulo: $("#av-titulo"),
+    cMeta: $("#av-meta"), cDatos: $("#av-datos"), cDesc: $("#av-desc"), cMalla: $("#av-malla")
+  };
+
+  /* ---------- carga ---------- */
+  async function gunzip(b64) {
+    const bin = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+    const stream = new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"));
+    return new Response(stream).arrayBuffer();
+  }
+  async function getText(url) {
+    const a = ASSETS && ASSETS[url];
+    if (a && a.gz) return new TextDecoder().decode(await gunzip(a.gz));
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(url + " (" + r.status + ")");
+    return r.text();
+  }
+  const imgURL = (url) => (ASSETS && typeof ASSETS[url] === "string" ? ASSETS[url] : url);
+  // Malla binaria AVM1: centrada, radio 1, Y hacia abajo.
+  async function getMesh(key) {
+    let buf;
+    if (ASSETS && ASSETS[key]) buf = await gunzip(ASSETS[key]);
+    else if (/\.txt$/.test(key)) {
+      // malla publicada como texto: gzip en base64
+      const r = await fetch(key);
+      if (!r.ok) throw new Error(key + " (" + r.status + ")");
+      buf = await gunzip((await r.text()).trim());
+    } else {
+      // modo con archivos separados: ruta a un .bin (comprimido con gzip o no)
+      const r = await fetch(key);
+      if (!r.ok) throw new Error(key + " (" + r.status + ")");
+      buf = await r.arrayBuffer();
+      const h = new Uint8Array(buf, 0, 2);
+      if (h[0] === 0x1f && h[1] === 0x8b) buf = await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+    }
+    const dv = new DataView(buf);
+    const nv = dv.getUint32(4, true), nf = dv.getUint32(8, true);
+    let o = 12;
+    const q = new Uint16Array(buf, o, nv * 3); o += nv * 6;
+    const t = new Uint16Array(buf, o, nv * 2); o += nv * 4;
+    const n = new Int8Array(buf, o, nv * 3); o += nv * 3;
+    const idx = new Uint16Array(buf.slice(o, o + nf * 6));
+    const pos = new Float32Array(nv * 3), nor = new Float32Array(nv * 3), uv = new Float32Array(nv * 2);
+    for (let i = 0; i < nv * 3; i++) { pos[i] = (q[i] / 65535) * 2 - 1; nor[i] = n[i] / 127; }
+    for (let i = 0; i < nv * 2; i++) uv[i] = t[i] / 65535;
+    return { pos, uv, nor, idx, nv, nf };
+  }
+  function loadImage(url) {
+    return new Promise((res, rej) => {
+      const im = new Image();
+      im.onload = () => res(im);
+      im.onerror = () => rej(new Error(url));
+      im.src = imgURL(url);
+    });
+  }
+
+  // Lector de OBJ: v / vt / vn / f (polígonos, índices negativos).
+  // Devuelve la malla centrada, con radio 1 y convertida a Y-abajo (p5).
+  function parseOBJ(txt) {
+    const P = [], T = [], N = [];
+    const pos = [], uv = [], nor = [], src = [], idx = [];
+    const map = new Map();
+    let hasNormals = true;
+    const lines = txt.split("\n");
+    for (let li = 0; li < lines.length; li++) {
+      const line = lines[li];
+      if (line.length < 3) continue;
+      const c0 = line.charCodeAt(0), c1 = line.charCodeAt(1);
+      if (c0 === 118) {
+        const s = line.trim().split(/\s+/);
+        if (c1 === 32 || c1 === 9) P.push(+s[1], +s[2], +s[3]);
+        else if (c1 === 116) T.push(+s[1], +s[2]);
+        else if (c1 === 110) N.push(+s[1], +s[2], +s[3]);
+      } else if (c0 === 102 && (c1 === 32 || c1 === 9)) {
+        const s = line.trim().split(/\s+/);
+        const poly = [];
+        for (let k = 1; k < s.length; k++) {
+          const key = s[k];
+          let id = map.get(key);
+          if (id === undefined) {
+            const p = key.split("/");
+            let vi = parseInt(p[0], 10); vi = vi < 0 ? P.length / 3 + vi : vi - 1;
+            let ti = p[1] ? parseInt(p[1], 10) : NaN;
+            if (!isNaN(ti)) ti = ti < 0 ? T.length / 2 + ti : ti - 1;
+            let ni = p[2] ? parseInt(p[2], 10) : NaN;
+            if (!isNaN(ni)) ni = ni < 0 ? N.length / 3 + ni : ni - 1;
+            id = pos.length / 3;
+            pos.push(P[vi * 3], P[vi * 3 + 1], P[vi * 3 + 2]);
+            src.push(vi);
+            if (!isNaN(ti)) uv.push(T[ti * 2], T[ti * 2 + 1]); else uv.push(0, 0);
+            if (!isNaN(ni)) nor.push(N[ni * 3], N[ni * 3 + 1], N[ni * 3 + 2]);
+            else { nor.push(0, 0, 0); hasNormals = false; }
+            map.set(key, id);
+          }
+          poly.push(id);
+        }
+        for (let k = 1; k + 1 < poly.length; k++) idx.push(poly[0], poly[k], poly[k + 1]);
+      }
+    }
+    const nv = pos.length / 3;
+
+    if (!hasNormals) {
+      // normales suaves por posición original (ignora costuras UV)
+      const acc = new Float64Array(P.length);
+      for (let f = 0; f < idx.length; f += 3) {
+        const a = idx[f] * 3, b = idx[f + 1] * 3, c = idx[f + 2] * 3;
+        const ux = pos[b] - pos[a], uy = pos[b + 1] - pos[a + 1], uz = pos[b + 2] - pos[a + 2];
+        const vx = pos[c] - pos[a], vy = pos[c + 1] - pos[a + 1], vz = pos[c + 2] - pos[a + 2];
+        const nx = uy * vz - uz * vy, ny = uz * vx - ux * vz, nz = ux * vy - uy * vx;
+        for (const id of [idx[f], idx[f + 1], idx[f + 2]]) {
+          const o = src[id] * 3; acc[o] += nx; acc[o + 1] += ny; acc[o + 2] += nz;
+        }
+      }
+      for (let i = 0; i < nv; i++) {
+        const o = src[i] * 3;
+        const l = Math.hypot(acc[o], acc[o + 1], acc[o + 2]) || 1;
+        nor[i * 3] = acc[o] / l; nor[i * 3 + 1] = acc[o + 1] / l; nor[i * 3 + 2] = acc[o + 2] / l;
+      }
+    }
+
+    // centrar y normalizar a radio 1
+    let mn = [Infinity, Infinity, Infinity], mx = [-Infinity, -Infinity, -Infinity];
+    for (let i = 0; i < nv; i++) for (let k = 0; k < 3; k++) {
+      const v = pos[i * 3 + k]; if (v < mn[k]) mn[k] = v; if (v > mx[k]) mx[k] = v;
+    }
+    const c = [(mn[0] + mx[0]) / 2, (mn[1] + mx[1]) / 2, (mn[2] + mx[2]) / 2];
+    let r = 0;
+    for (let i = 0; i < nv; i++) {
+      const d = Math.hypot(pos[i * 3] - c[0], pos[i * 3 + 1] - c[1], pos[i * 3 + 2] - c[2]);
+      if (d > r) r = d;
+    }
+    r = r || 1;
+    // rotación de 180° en X: Y-arriba (OBJ) -> Y-abajo (p5) sin invertir la malla
+    for (let i = 0; i < nv; i++) {
+      pos[i * 3] = (pos[i * 3] - c[0]) / r;
+      pos[i * 3 + 1] = -(pos[i * 3 + 1] - c[1]) / r;
+      pos[i * 3 + 2] = -(pos[i * 3 + 2] - c[2]) / r;
+      nor[i * 3 + 1] = -nor[i * 3 + 1];
+      nor[i * 3 + 2] = -nor[i * 3 + 2];
+    }
+    return { pos, uv, nor, idx, nv, nf: idx.length / 3 };
+  }
+
+  /* ---------- cuaterniones [w,x,y,z] ---------- */
+  const qMul = (a, b) => [
+    a[0] * b[0] - a[1] * b[1] - a[2] * b[2] - a[3] * b[3],
+    a[0] * b[1] + a[1] * b[0] + a[2] * b[3] - a[3] * b[2],
+    a[0] * b[2] - a[1] * b[3] + a[2] * b[0] + a[3] * b[1],
+    a[0] * b[3] + a[1] * b[2] - a[2] * b[1] + a[3] * b[0]
+  ];
+  const qAxis = (ax, ang) => {
+    const s = Math.sin(ang / 2);
+    return [Math.cos(ang / 2), ax[0] * s, ax[1] * s, ax[2] * s];
+  };
+  const qNorm = (q) => { const l = Math.hypot(q[0], q[1], q[2], q[3]) || 1; return q.map((v) => v / l); };
+
+  /* ---------- vectores ---------- */
+  const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+  const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+  const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+  const norm = (a) => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
+  const damp = (cur, tgt, k, dt) => cur + (tgt - cur) * (1 - Math.exp(-k * dt));
+
+
+  /* ---------- matrices (columna mayor) ---------- */
+  function perspective(fov, aspect, near, far) {
+    const f = 1 / Math.tan(fov / 2), nf = 1 / (near - far);
+    // y invertida: en este espacio +y apunta hacia abajo en pantalla
+    return new Float32Array([f / aspect, 0, 0, 0, 0, -f, 0, 0, 0, 0, (far + near) * nf, -1, 0, 0, 2 * far * near * nf, 0]);
+  }
+  function viewMatrix(eye, ax) {
+    const { x, y, z } = ax;
+    return new Float32Array([
+      x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0,
+      -dot(x, eye), -dot(y, eye), -dot(z, eye), 1
+    ]);
+  }
+  function modelMatrix(pos, q, s) {
+    const [w, x, y, z] = q;
+    const xx = x * x, yy = y * y, zz = z * z, xy = x * y, xz = x * z, yz = y * z, wx = w * x, wy = w * y, wz = w * z;
+    return new Float32Array([
+      (1 - 2 * (yy + zz)) * s, 2 * (xy + wz) * s, 2 * (xz - wy) * s, 0,
+      2 * (xy - wz) * s, (1 - 2 * (xx + zz)) * s, 2 * (yz + wx) * s, 0,
+      2 * (xz + wy) * s, 2 * (yz - wx) * s, (1 - 2 * (xx + yy)) * s, 0,
+      pos[0], pos[1], pos[2], 1
+    ]);
+  }
+  function mul4(a, b) {
+    const r = new Float32Array(16);
+    for (let c = 0; c < 4; c++) for (let rr = 0; rr < 4; rr++) {
+      let v = 0;
+      for (let k = 0; k < 4; k++) v += a[k * 4 + rr] * b[c * 4 + k];
+      r[c * 4 + rr] = v;
+    }
+    return r;
+  }
+  const upper3 = (m) => new Float32Array([m[0], m[1], m[2], m[4], m[5], m[6], m[8], m[9], m[10]]);
+
+  /* ---------- WebGL ---------- */
+  const canvas = document.createElement("canvas");
+  canvas.setAttribute("role", "img");
+  canvas.setAttribute("aria-label", "3D space of the volumetric archive");
+  ui.holder.appendChild(canvas);
+  const gl = canvas.getContext("webgl2", { antialias: true, alpha: false, powerPreference: "high-performance" });
+  if (!gl) {
+    ui.carga.hidden = false;
+    ui.carga.classList.add("error");
+    ui.carga.textContent = "This browser cannot display the 3D space (WebGL2 is disabled). Try an up-to-date Chrome, Safari or Firefox.";
+    return { pause() {}, resume() {} };
+  }
+  const aniso = gl.getExtension("EXT_texture_filter_anisotropic");
+
+  function program(vs, fs) {
+    const mk = (type, src) => {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, src); gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+      return s;
+    };
+    const p = gl.createProgram();
+    gl.attachShader(p, mk(gl.VERTEX_SHADER, vs)); gl.attachShader(p, mk(gl.FRAGMENT_SHADER, fs));
+    gl.bindAttribLocation(p, 0, "aPosition"); gl.bindAttribLocation(p, 1, "aNormal"); gl.bindAttribLocation(p, 2, "aTexCoord");
+    gl.linkProgram(p);
+    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
+    const u = {};
+    const n = gl.getProgramParameter(p, gl.ACTIVE_UNIFORMS);
+    for (let i = 0; i < n; i++) { const info = gl.getActiveUniform(p, i); u[info.name.replace(/\[0\]$/, "")] = gl.getUniformLocation(p, info.name); }
+    return { p, u };
+  }
+
+  const MESH_VS = `#version 300 es
+precision highp float;
+layout(location=0) in vec3 aPosition; layout(location=1) in vec3 aNormal; layout(location=2) in vec2 aTexCoord;
+uniform mat4 uModelViewMatrix; uniform mat4 uProjectionMatrix; uniform mat3 uNormalMatrix;
+out vec3 vPos; out vec3 vNormal; out vec2 vUv;
+void main(){
+  vec4 p = uModelViewMatrix * vec4(aPosition, 1.0);
+  vPos = p.xyz; vNormal = normalize(uNormalMatrix * aNormal); vUv = aTexCoord;
+  gl_Position = uProjectionMatrix * p;
+}`;
+  const MESH_FS = `#version 300 es
+precision highp float;
+in vec3 vPos; in vec3 vNormal; in vec2 vUv;
+uniform sampler2D uColor; uniform sampler2D uNormalMap; uniform sampler2D uRough;
+uniform float uHasNormal; uniform float uHasRough;
+uniform float uNormalStrength; uniform float uDim; uniform float uFade;
+uniform vec3 uFog; uniform float uFogNear; uniform float uFogFar;
+out vec4 fragColor;
+
+mat3 cotangentFrame(vec3 N, vec3 p, vec2 uv){
+  vec3 dp1 = dFdx(p), dp2 = dFdy(p);
+  vec2 duv1 = dFdx(uv), duv2 = dFdy(uv);
+  vec3 dp2perp = cross(dp2, N), dp1perp = cross(N, dp1);
+  vec3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+  vec3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+  float inv = inversesqrt(max(max(dot(T,T), dot(B,B)), 1e-12));
+  return mat3(T * inv, B * inv, N);
+}
+
+void main(){
+  vec2 st = vec2(vUv.x, 1.0 - vUv.y);
+  vec3 V = normalize(-vPos);
+  vec3 N = normalize(vNormal);
+  if (dot(N, V) < 0.0) N = -N;
+
+  if (uHasNormal > 0.5) {
+    vec3 m = texture(uNormalMap, st).xyz * 2.0 - 1.0;
+    m.xy *= uNormalStrength;
+    N = normalize(cotangentFrame(N, vPos, vUv) * m);
+  }
+
+  vec3 base = pow(texture(uColor, st).rgb, vec3(2.2));
+  float rough = uHasRough > 0.5 ? clamp(texture(uRough, st).r, 0.12, 1.0) : 0.7;
+
+  // luces en espacio de vista (y hacia abajo en pantalla)
+  vec3 L1 = normalize(vec3(-0.45, -0.75, 0.55)); vec3 C1 = vec3(1.00, 0.96, 0.90) * 1.55;
+  vec3 L2 = normalize(vec3(0.80, 0.15, 0.45));   vec3 C2 = vec3(0.78, 0.86, 0.92) * 0.45;
+  vec3 L3 = normalize(vec3(0.10, -0.40, -0.90)); vec3 C3 = vec3(0.95, 0.97, 1.00) * 0.70;
+
+  float shin = exp2(10.0 * (1.0 - rough) + 1.0);
+  float specK = (1.0 - rough) * 0.55;
+  vec3 col = vec3(0.0);
+  vec3 Ls[3] = vec3[3](L1, L2, L3);
+  vec3 Cs[3] = vec3[3](C1, C2, C3);
+  for (int i = 0; i < 3; i++) {
+    float wrap = max((dot(N, Ls[i]) + 0.25) / 1.25, 0.0);
+    vec3 H = normalize(Ls[i] + V);
+    float sp = pow(max(dot(N, H), 0.0), shin) * specK;
+    col += Cs[i] * (base * wrap + sp);
+  }
+  // ambiente hemisférico
+  float up = clamp(-N.y * 0.5 + 0.5, 0.0, 1.0);
+  col += base * mix(vec3(0.20, 0.20, 0.19), vec3(0.42, 0.43, 0.41), up);
+  // borde suave, como luz atravesando el aire
+  float rim = pow(1.0 - max(dot(N, V), 0.0), 3.0);
+  col += vec3(0.55, 0.57, 0.53) * rim * 0.35;
+
+  col = col / (col + vec3(0.85)) * 1.55;     // tono suave
+  col = pow(col, vec3(1.0 / 2.2));
+
+  float fog = smoothstep(uFogNear, uFogFar, -vPos.z) * 0.6;
+  col = mix(col, uFog, fog);
+  col = mix(col, uFog, uDim);
+  col = mix(uFog, col, uFade);
+  fragColor = vec4(col, 1.0);
+}`;
+  const DUST_VS = `#version 300 es
+precision highp float;
+layout(location=0) in vec4 aP;
+uniform mat4 uView; uniform mat4 uProj; uniform float uTime; uniform float uSize; uniform float uMotion;
+out float vA;
+void main(){
+  vec3 p = aP.xyz;
+  p.x += cos(uTime * 0.13 + aP.w) * 0.2 * uMotion;
+  p.y += sin(uTime * 0.20 + aP.w * 1.7) * 0.25 * uMotion;
+  vec4 v = uView * vec4(p, 1.0);
+  gl_Position = uProj * v;
+  gl_PointSize = uSize;
+  vA = clamp(1.2 - (-v.z) / 30.0, 0.25, 1.0);
+}`;
+  const DUST_FS = `#version 300 es
+precision mediump float;
+in float vA; out vec4 o;
+void main(){ vec2 c = gl_PointCoord - 0.5; float d = dot(c, c); if (d > 0.25) discard; o = vec4(0.95, 0.94, 0.91, 0.42 * vA * (1.0 - d * 3.0)); }`;
+
+  let meshProg, dustProg;
+  try { meshProg = program(MESH_VS, MESH_FS); dustProg = program(DUST_VS, DUST_FS); }
+  catch (e) {
+    console.error("Archivo volumétrico (shader):", e);
+    ui.carga.hidden = false; ui.carga.classList.add("error");
+    ui.carga.textContent = "The 3D viewer could not be prepared on this device.";
+    return { pause() {}, resume() {} };
+  }
+
+  function uploadMesh(m) {
+    const vao = gl.createVertexArray();
+    gl.bindVertexArray(vao);
+    const attr = (loc, data, size) => {
+      const b = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, b);
+      gl.bufferData(gl.ARRAY_BUFFER, data instanceof Float32Array ? data : new Float32Array(data), gl.STATIC_DRAW);
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, size, gl.FLOAT, false, 0, 0);
+    };
+    attr(0, m.pos, 3); attr(1, m.nor, 3); attr(2, m.uv, 2);
+    const big = m.nv > 65535;
+    const ib = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ib);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, big ? new Uint32Array(m.idx) : (m.idx instanceof Uint16Array ? m.idx : new Uint16Array(m.idx)), gl.STATIC_DRAW);
+    gl.bindVertexArray(null);
+    return { vao, count: m.idx.length, type: big ? gl.UNSIGNED_INT : gl.UNSIGNED_SHORT };
+  }
+  function uploadTex(img) {
+    const t = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, t);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+    gl.generateMipmap(gl.TEXTURE_2D);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+    if (aniso) gl.texParameterf(gl.TEXTURE_2D, aniso.TEXTURE_MAX_ANISOTROPY_EXT, 4);
+    return t;
+  }
+
+  /* ---------- estado ---------- */
+  const objs = [];
+  let selected = null, hovered = null, loadedCount = 0, failed = [], lastInteract = 0;
+  const N_TOTAL = CATALOGO.length;
+  const R_LAYOUT = 1.2 + 1.0 * Math.cbrt(Math.max(N_TOTAL, 1));
+  let navDist = R_LAYOUT * 2.1 + 2.2;
+  const cam = { c: [0, 0, 0], yaw: 0.35, pitch: 0.16, dist: navDist * 1.5 };
+  const tgt = { c: [0, 0, 0], yaw: 0.35, pitch: 0.16, dist: navDist };
+  let objZoom = 1, vel = { x: 0, y: 0 };
+  let eye = [0, 0, 10], axes = { x: [1, 0, 0], y: [0, 1, 0], z: [0, 0, 1] };
+  let W = 1, H = 1, DPR = 1;
+  const now = () => performance.now() / 1000;
+  function rand(seed) { const x = Math.sin(seed * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+
+  function layoutPos(i) {
+    const n = Math.max(N_TOTAL, 1);
+    if (n === 1) return [0, 0, 0];
+    const y = 1 - (2 * (i + 0.5)) / n;
+    const rr = Math.sqrt(Math.max(0, 1 - y * y));
+    const th = i * 2.39996 + 0.6;
+    const shell = R_LAYOUT * (0.65 + 0.35 * rand(i + 3));
+    return [Math.cos(th) * rr * shell, y * R_LAYOUT * 0.45, Math.sin(th) * rr * shell];
+  }
+
+  // polvo suspendido
+  const DUST_N = 260;
+  const dust = new Float32Array(DUST_N * 4);
+  for (let i = 0; i < DUST_N; i++) {
+    dust[i * 4] = (Math.random() - 0.5) * R_LAYOUT * 5;
+    dust[i * 4 + 1] = (Math.random() - 0.5) * R_LAYOUT * 3.2;
+    dust[i * 4 + 2] = (Math.random() - 0.5) * R_LAYOUT * 5;
+    dust[i * 4 + 3] = Math.random() * 6.28;
+  }
+  const dustVao = gl.createVertexArray();
+  gl.bindVertexArray(dustVao);
+  const dustBuf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, dustBuf);
+  gl.bufferData(gl.ARRAY_BUFFER, dust, gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0);
+  gl.vertexAttribPointer(0, 4, gl.FLOAT, false, 0, 0);
+  gl.bindVertexArray(null);
+
+  function resize() {
+    const r = ui.holder.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return;
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = r.width; H = r.height;
+    const cw = Math.round(W * DPR), ch = Math.round(H * DPR);
+    if (canvas.width !== cw || canvas.height !== ch) { canvas.width = cw; canvas.height = ch; }
+  }
+  new ResizeObserver(resize).observe(ui.holder);
+  resize();
+
+  function loadItem(item, i) {
+    const o = {
+      item, i, mesh: null, tex: {}, fade: 0, dim: 0, amp: 1,
+      base: layoutPos(i), pos: [0, 0, 0],
+      q: qNorm(qMul(qAxis([0, 1, 0], rand(i + 5) * 6.28), qAxis([1, 0, 0], (rand(i + 7) - 0.5) * 0.4))),
+      spin: (rand(i + 9) > 0.5 ? 1 : -1) * (0.08 + rand(i + 13) * 0.08),
+      ph: rand(i + 29) * 6.28, size: item.escala || 1
+    };
+    o.pos = o.base.slice();
+    const texs = [["color", item.color], ["normal", item.normal], ["rugosidad", item.rugosidad]]
+      .filter(([, u]) => !!u)
+      .map(([k, u]) => loadImage(u).then((img) => { o.tex[k] = uploadTex(img); }));
+    const src = item.malla ? getMesh(item.malla) : getText(item.modelo).then(parseOBJ);
+    const mesh = src.then((m) => { o.mesh = uploadMesh(m); o.nv = m.nv; o.nf = m.nf; });
+    Promise.all([mesh, ...texs]).then(() => {
+      objs.push(o); loadedCount++;
+      enableIndex(item.id); updateCarga();
+    }).catch((e) => {
+      console.error("Archivo volumétrico:", e);
+      failed.push(item.codigo || item.id); updateCarga();
+    });
+  }
+
+  function computeCamera() {
+    const cp = Math.cos(cam.pitch);
+    eye = [cam.c[0] + cam.dist * cp * Math.sin(cam.yaw), cam.c[1] - cam.dist * Math.sin(cam.pitch), cam.c[2] + cam.dist * cp * Math.cos(cam.yaw)];
+    const z = norm(sub(eye, cam.c)), x = norm(cross([0, 1, 0], z)), y = cross(z, x);
+    axes = { x, y, z };
+  }
+  function project(w) {
+    const v = sub(w, eye);
+    const depth = -dot(v, axes.z);
+    const F = (H / 2) / Math.tan(FOV / 2);
+    return { x: W / 2 + (dot(v, axes.x) / depth) * F, y: H / 2 + (dot(v, axes.y) / depth) * F, depth, F };
+  }
+  function panelInfo() {
+    if (!selected || ui.cedula.hidden) return { side: 0, bottom: 0 };
+    const r = ui.cedula.getBoundingClientRect(), s = ui.stage.getBoundingClientRect();
+    if (window.innerWidth >= 820) return { side: Math.max(0, s.right - r.left + 8), bottom: 0 };
+    return { side: 0, bottom: Math.max(0, s.bottom - r.top) };
+  }
+
+  /* ---------- bucle ---------- */
+  let running = true, last = now(), raf = 0;
+  function frame() {
+    raf = 0;
+    if (!running) return;
+    const t = now(), dt = Math.min(t - last, 0.05);
+    last = t;
+    step(t, dt);
+    render(t);
+    updateHover();
+    raf = requestAnimationFrame(frame);
+  }
+
+  function step(t, dt) {
+    for (const o of objs) {
+      const isSel = o === selected;
+      o.fade = damp(o.fade, 1, 2.2, dt);
+      o.dim = damp(o.dim, selected && !isSel ? 0.88 : 0, 5, dt);
+      o.amp = damp(o.amp, isSel ? 0 : 1, 4, dt);
+      const a = (REDUCED ? 0.35 : 1) * o.amp;
+      o.pos = [
+        o.base[0] + Math.sin(t * 0.31 + o.ph) * 0.14 * a,
+        o.base[1] + Math.sin(t * 0.47 + o.ph * 1.3) * 0.22 * a,
+        o.base[2] + Math.cos(t * 0.27 + o.ph) * 0.14 * a
+      ];
+      if (!isSel && !REDUCED) o.q = qNorm(qMul(qAxis([0, 1, 0], o.spin * dt * o.amp), o.q));
+    }
+    if (!dragging) {
+      if (Math.abs(vel.x) + Math.abs(vel.y) > 0.01) {
+        applyDrag(vel.x * dt * 60, vel.y * dt * 60);
+        const k = Math.pow(0.9, dt * 60); vel.x *= k; vel.y *= k;
+      }
+      if (!selected && !REDUCED && t - lastInteract > 4) tgt.yaw += dt * 0.035;
+    }
+    computeCamera();
+    const F = (H / 2) / Math.tan(FOV / 2);
+    if (selected) {
+      const pi = panelInfo();
+      const availW = W - pi.side, availH = H - pi.bottom;
+      // el objeto completo cabe en el área libre: su radio ocupa ~40% del lado menor
+      tgt.dist = (selected.size * F) / (0.4 * Math.min(availW, availH)) * objZoom;
+      const wpp = (2 * cam.dist * Math.tan(FOV / 2)) / H;
+      const sx = (pi.side / 2) * wpp, sy = (pi.bottom / 2) * wpp;
+      tgt.c = [0, 1, 2].map((k) => selected.pos[k] + axes.x[k] * sx + axes.y[k] * sy);
+    } else {
+      // en vertical, el grupo sube un poco para no quedar bajo el título
+      const lift = W < H ? (0.13 * H) * (2 * cam.dist * Math.tan(FOV / 2)) / H : 0;
+      tgt.c = [axes.y[0] * lift, axes.y[1] * lift, axes.y[2] * lift];
+      // en pantallas verticales se aleja para que todos los objetos quepan completos
+      tgt.dist = navDist * Math.min(2, Math.max(1, 1.05 / (W / H)));
+    }
+    const kc = selected ? 3.2 : 2.2;
+    cam.c = cam.c.map((v, k) => damp(v, tgt.c[k], kc, dt));
+    cam.dist = damp(cam.dist, tgt.dist, kc, dt);
+    cam.yaw = damp(cam.yaw, tgt.yaw, 10, dt);
+    cam.pitch = damp(cam.pitch, tgt.pitch, 10, dt);
+    computeCamera();
+  }
+
+  function render(t) {
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clearColor(FOG[0], FOG[1], FOG[2], 1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    gl.enable(gl.DEPTH_TEST);
+    gl.disable(gl.CULL_FACE);
+    const proj = perspective(FOV, W / H, 0.05, 400);
+    const view = viewMatrix(eye, axes);
+
+    // objetos
+    gl.disable(gl.BLEND); gl.depthMask(true);
+    const { p, u } = meshProg;
+    gl.useProgram(p);
+    gl.uniformMatrix4fv(u.uProjectionMatrix, false, proj);
+    gl.uniform3fv(u.uFog, FOG);
+    gl.uniform1f(u.uFogNear, cam.dist * 0.8);
+    gl.uniform1f(u.uFogFar, cam.dist * 2.6 + R_LAYOUT * 2);
+    gl.uniform1i(u.uColor, 0); gl.uniform1i(u.uNormalMap, 1); gl.uniform1i(u.uRough, 2);
+    for (const o of objs) {
+      const mv = mul4(view, modelMatrix(o.pos, o.q, o.size));
+      gl.uniformMatrix4fv(u.uModelViewMatrix, false, mv);
+      gl.uniformMatrix3fv(u.uNormalMatrix, false, upper3(mv));
+      gl.uniform1f(u.uHasNormal, o.tex.normal ? 1 : 0);
+      gl.uniform1f(u.uHasRough, o.tex.rugosidad ? 1 : 0);
+      gl.uniform1f(u.uNormalStrength, o === selected ? 1.0 : 0.8);
+      gl.uniform1f(u.uDim, o.dim);
+      gl.uniform1f(u.uFade, Math.min(1, o.fade));
+      gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, o.tex.color);
+      gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, o.tex.normal || o.tex.color);
+      gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, o.tex.rugosidad || o.tex.color);
+      gl.bindVertexArray(o.mesh.vao);
+      gl.drawElements(gl.TRIANGLES, o.mesh.count, o.mesh.type, 0);
+    }
+
+    // polvo
+    gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA); gl.depthMask(false);
+    gl.useProgram(dustProg.p);
+    gl.uniformMatrix4fv(dustProg.u.uView, false, view);
+    gl.uniformMatrix4fv(dustProg.u.uProj, false, proj);
+    gl.uniform1f(dustProg.u.uTime, t);
+    gl.uniform1f(dustProg.u.uMotion, REDUCED ? 0 : 1);
+    gl.uniform1f(dustProg.u.uSize, 2.2 * DPR);
+    gl.bindVertexArray(dustVao);
+    gl.drawArrays(gl.POINTS, 0, DUST_N);
+    gl.bindVertexArray(null);
+    gl.depthMask(true);
+  }
+
+  /* ---------- selección ---------- */
+  function pick(px, py) {
+    let best = null, bestD = Infinity;
+    for (const o of objs) {
+      if (o.fade < 0.3) continue;
+      const pr = project(o.pos);
+      if (pr.depth <= 0.05) continue;
+      const rad = (o.size * pr.F) / pr.depth;
+      if (Math.hypot(px - pr.x, py - pr.y) < rad * 0.85 && pr.depth < bestD) { best = o; bestD = pr.depth; }
+    }
+    return best;
+  }
+  let pointer = null;
+  function updateHover() {
+    if (!pointer || dragging || pointer.type !== "mouse") { setHover(null); return; }
+    const o = pick(pointer.x, pointer.y);
+    setHover(o && o !== selected ? o : null);
+  }
+  function setHover(o) {
+    if (o === hovered) { if (o) positionTooltip(); return; }
+    hovered = o;
+    ui.holder.style.cursor = o ? "pointer" : "grab";
+    if (o) { ui.tooltip.textContent = o.item.titulo; ui.tooltip.hidden = false; positionTooltip(); }
+    else ui.tooltip.hidden = true;
+  }
+  function positionTooltip() { ui.tooltip.style.transform = `translate(${pointer.x + 14}px, ${pointer.y + 14}px)`; }
+
+  function select(o) {
+    if (!o) return;
+    vel.x = vel.y = 0;
+    selected = o; objZoom = 1;
+    fillCedula(o);
+    ui.stage.classList.add("con-objeto");
+    ui.cedula.hidden = false;
+    requestAnimationFrame(() => requestAnimationFrame(() => ui.cedula.classList.add("abierta")));
+    markIndex(o.item.id);
+    ui.volver.focus({ preventScroll: true });
+  }
+  function deselect() {
+    if (!selected) return;
+    selected = null; vel.x = vel.y = 0; tgt.dist = navDist;
+    ui.stage.classList.remove("con-objeto");
+    ui.cedula.classList.remove("abierta");
+    setTimeout(() => { if (!selected) ui.cedula.hidden = true; }, 350);
+    markIndex(null);
+    lastInteract = now();
+  }
+  ui.volver.addEventListener("click", deselect);
+
+  /* ---------- entrada ---------- */
+  let dragging = false, down = null, pinch0 = null;
+  const pts = new Map();
+  function applyDrag(dx, dy) {
+    if (selected) {
+      const k = 0.0085;
+      let q = qMul(qAxis(axes.y, dx * k), selected.q);
+      q = qMul(qAxis(axes.x, -dy * k), q);
+      selected.q = qNorm(q);
+    } else {
+      tgt.yaw -= dx * 0.0055;
+      tgt.pitch = Math.max(-1.25, Math.min(1.25, tgt.pitch + dy * 0.0045));
+    }
+  }
+  function zoomBy(f) {
+    if (selected) objZoom = Math.max(0.35, Math.min(2.2, objZoom * f));
+    else { navDist = Math.max(R_LAYOUT * 0.6, Math.min(R_LAYOUT * 5, navDist * f)); tgt.dist = navDist; }
+    lastInteract = now();
+  }
+  const local = (e) => { const r = canvas.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  canvas.addEventListener("pointerdown", (e) => {
+    try { canvas.setPointerCapture(e.pointerId); } catch (_) {}
+    const l = local(e);
+    pts.set(e.pointerId, l);
+    if (pts.size === 1) { down = { x: l.x, y: l.y, t: performance.now(), moved: 0 }; dragging = true; vel.x = vel.y = 0; ui.holder.style.cursor = "grabbing"; }
+    else if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch0 = Math.hypot(a.x - b.x, a.y - b.y); if (down) down.moved = 999; }
+    lastInteract = now();
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    const l = local(e);
+    pointer = { x: l.x, y: l.y, type: e.pointerType };
+    if (!pts.has(e.pointerId)) return;
+    const prev = pts.get(e.pointerId);
+    pts.set(e.pointerId, l);
+    if (pts.size === 1 && dragging) {
+      const dx = l.x - prev.x, dy = l.y - prev.y;
+      if (down) down.moved += Math.abs(dx) + Math.abs(dy);
+      const ty = (e.pointerType === "touch" && !selected) ? 0 : dy;
+      applyDrag(dx, ty); vel.x = dx; vel.y = ty;
+    } else if (pts.size === 2 && pinch0) {
+      const [a, b] = [...pts.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d > 0) { zoomBy(pinch0 / d); pinch0 = d; }
+    }
+    lastInteract = now();
+  });
+  const end = (e) => {
+    const l = local(e), cancelled = e.type === "pointercancel";
+    pts.delete(e.pointerId);
+    if (pts.size < 2) pinch0 = null;
+    if (pts.size === 0) {
+      dragging = false;
+      ui.holder.style.cursor = hovered ? "pointer" : "grab";
+      if (!cancelled && down && down.moved < 8 && performance.now() - down.t < 450) {
+        vel.x = vel.y = 0;
+        const o = pick(l.x, l.y);
+        if (o && o !== selected) select(o);
+      }
+      down = null;
+    }
+  };
+  canvas.addEventListener("pointerup", end);
+  canvas.addEventListener("pointercancel", end);
+  canvas.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") pointer = null; });
+  canvas.addEventListener("wheel", (e) => { e.preventDefault(); zoomBy(Math.exp(e.deltaY * 0.0012)); }, { passive: false });
+  const visible = () => !!ui.stage.offsetParent;
+  window.addEventListener("keydown", (e) => {
+    if (!visible() || (e.target && /input|textarea|select/i.test(e.target.tagName))) return;
+    if (e.key === "Escape") { deselect(); return; }
+    const inStage = ui.stage.contains(document.activeElement) || document.activeElement === document.body;
+    if (!inStage) return;
+    const s = 18;
+    if (e.key === "ArrowLeft") applyDrag(-s, 0);
+    else if (e.key === "ArrowRight") applyDrag(s, 0);
+    else if (e.key === "ArrowUp") { applyDrag(0, -s); e.preventDefault(); }
+    else if (e.key === "ArrowDown") { applyDrag(0, s); e.preventDefault(); }
+    else if (e.key === "+" || e.key === "=") zoomBy(0.9);
+    else if (e.key === "-" || e.key === "_") zoomBy(1.1);
+    lastInteract = now();
+  });
+
+  window.__archivoSelect = select;
+  buildIndex();
+  CATALOGO.forEach((item, i) => loadItem(item, i));
+  updateCarga();
+  raf = requestAnimationFrame(frame);
+
+  /* ---------- interfaz ---------- */
+  function pendiente(v) {
+    return v === null || v === undefined || v === ""
+      ? '<span class="pendiente">Forthcoming</span>'
+      : escapeHTML(String(v));
+  }
+  function escapeHTML(s) {
+    return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+  const fmt = (n) => n.toLocaleString("en-US");
+
+  function fillCedula(o) {
+    const it = o.item;
+    ui.cCodigo.textContent = it.codigo || it.id;
+    ui.cTitulo.textContent = it.titulo || "Untitled";
+    ui.cMeta.innerHTML = [it.categoria, it.anio].filter(Boolean).map(escapeHTML).join(", ") || pendiente(null);
+    ui.cDatos.innerHTML =
+      `<dt>Medium</dt><dd>${pendiente(it.tecnica)}</dd>` +
+      `<dt>Origin</dt><dd>${pendiente(it.origen)}</dd>` +
+      `<dt>Dimensions</dt><dd>${pendiente(it.dimensiones)}</dd>`;
+    ui.cDesc.innerHTML = pendiente(it.descripcion);
+    ui.cMalla.textContent = `Web mesh: ${fmt(o.nv)} vertices, ${fmt(o.nf)} faces`;
+  }
+
+  function buildIndex() {
+    ui.indice.innerHTML = "";
+    CATALOGO.forEach((it) => {
+      const li = document.createElement("li");
+      const b = document.createElement("button");
+      b.type = "button";
+      b.dataset.id = it.id;
+      b.disabled = true;
+      b.innerHTML = `<span class="i-codigo">${escapeHTML(it.codigo || it.id)}</span> ${escapeHTML(it.titulo || "")}`;
+      b.addEventListener("click", () => {
+        const o = objs.find((x) => x.item.id === it.id);
+        if (o) window.__archivoSelect(o);
+      });
+      li.appendChild(b);
+      ui.indice.appendChild(li);
+    });
+  }
+  function enableIndex(id) {
+    const b = ui.indice.querySelector(`button[data-id="${id}"]`);
+    if (b) b.disabled = false;
+  }
+  function markIndex(id) {
+    ui.indice.querySelectorAll("button").forEach((b) => b.setAttribute("aria-current", b.dataset.id === id ? "true" : "false"));
+  }
+  function updateCarga() {
+    ui.carga.classList.toggle("error", failed.length > 0);
+    if (failed.length) {
+      ui.carga.hidden = false;
+      ui.carga.textContent = `Could not load ${failed.join(", ")}.`;
+      return;
+    }
+    if (loadedCount >= N_TOTAL) { ui.carga.hidden = true; return; }
+    ui.carga.hidden = false;
+    ui.carga.textContent = `Loading objects: ${loadedCount} of ${N_TOTAL}`;
+  }
+
+  return {
+    pause() { running = false; if (raf) cancelAnimationFrame(raf); raf = 0; },
+    resume() { resize(); if (!running) { running = true; last = now(); raf = requestAnimationFrame(frame); } }
+  };
+};
+
+/* ---------- Arranque automático: se activa cuando la sección #av-escenario se hace visible ---------- */
+(function () {
+  /* ---------- CATÁLOGO: una entrada por objeto (null = "Por completar" en la cédula) ---------- */
+  const ARCHIVO = [
+    {id:"av-001", codigo:"AV-001", titulo:"Alien crustacean", categoria:"Life form", anio:null,
+     tecnica:null, origen:null, dimensiones:null, descripcion:null,
+     malla:"archivo-av-001-malla.txt", color:"archivo-av-001-color.jpg", normal:"archivo-av-001-normal.jpg", rugosidad:"archivo-av-001-rugosidad.jpg", escala:1},
+    {id:"av-002", codigo:"AV-002", titulo:"Amorphous creature", categoria:"Life form", anio:null,
+     tecnica:null, origen:null, dimensiones:null, descripcion:null,
+     malla:"archivo-av-002-malla.txt", color:"archivo-av-002-color.jpg", normal:"archivo-av-002-normal.jpg", rugosidad:"archivo-av-002-rugosidad.jpg", escala:1},
+    {id:"av-003", codigo:"AV-003", titulo:"Sea urchin", categoria:"Life form", anio:null,
+     tecnica:null, origen:null, dimensiones:null, descripcion:null,
+     malla:"archivo-av-003-malla.txt", color:"archivo-av-003-color.jpg", normal:"archivo-av-003-normal.jpg", rugosidad:"archivo-av-003-rugosidad.jpg", escala:1},
+  ];
+  const sec = document.getElementById("av-escenario");
+  if (!sec) return;
+  let AV = null, iniciado = false;
+  function setTopH() {
+    const t = document.querySelector(".top");
+    if (t) document.documentElement.style.setProperty("--top-h", t.offsetHeight + "px");
+  }
+  function datos() {
+    const el = document.getElementById("av-assets");
+    return el ? JSON.parse(el.textContent) : null;   // sin #av-assets = modo archivos separados
+  }
+  function revisar() {
+    if (document.readyState === "loading") return;
+    setTopH();
+    const visible = !!sec.offsetParent;
+    if (visible) {
+      if (AV) AV.resume();
+      else if (!iniciado) { iniciado = true; requestAnimationFrame(() => { AV = window.iniciarArchivo(ARCHIVO, datos()); }); }
+    } else if (AV) AV.pause();
+  }
+  new MutationObserver(revisar).observe(sec, { attributes: true, attributeFilter: ["class", "hidden", "style"] });
+  addEventListener("hashchange", () => setTimeout(revisar, 0));
+  addEventListener("resize", setTopH);
+  if (document.readyState === "loading") addEventListener("DOMContentLoaded", revisar);
+  else revisar();
+})();
+/* ===== ARCHIVO VOLUMÉTRICO — FIN ===== */
+</script>
+</body>
+</html>
