@@ -358,6 +358,67 @@ blockquote.quote{margin:0}
 .wced{margin-top:clamp(40px,6vw,88px);max-width:720px;display:grid;gap:4px}
 .wced h3{font-family:var(--helv);font-weight:300;font-size:clamp(22px,2.2vw,30px)}
 .wced .ced{margin-top:12px}
+.cedrow{display:flex;align-items:flex-end;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
+.cedrow .ced{flex:1 1 320px}
+.aboutbtn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-family:var(--helv);font-size:13px;letter-spacing:.02em;white-space:nowrap;transition:background .25s,color .25s}
+.aboutbtn span{transition:transform .25s}
+.aboutbtn:hover{background:var(--ink);color:#fff}.aboutbtn:hover span{transform:translateX(3px)}
+.hmlink{margin:0}
+.hmtabs{margin-top:clamp(40px,5vw,64px);border-bottom:1px solid var(--rule)}
+.hmtabs ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 clamp(24px,4vw,48px)}
+.hmtabs a{display:block;padding:12px 0 14px;margin-bottom:-1px;border-bottom:2px solid transparent;color:var(--muted);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;transition:color .2s,border-color .2s}
+.hmtabs a:hover{color:var(--ink)}
+.hmtabs a[aria-current]{color:var(--ink);border-bottom-color:var(--ink)}
+.hmpanel{display:none}
+.hmpanel.on{display:block}
+.hmprint{display:grid;grid-template-columns:minmax(0,auto) minmax(240px,340px);justify-content:center;align-items:end;gap:clamp(32px,5vw,72px);margin-top:clamp(56px,8vw,112px)}
+.hmprint figure{margin:0}
+.hmprint img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 120px);background:var(--tile)}
+.hmpinfo .mbn{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.hmpinfo h3{margin:8px 0 0;font-family:var(--display);font-weight:300;font-size:clamp(28px,3vw,40px);line-height:1.1}
+@media (max-width:760px){.hmprint{grid-template-columns:1fr;justify-items:center}.hmprint img{max-height:none;width:100%}.hmpinfo{width:100%}}
+.murm{position:relative;margin-top:clamp(40px,6vw,80px);aspect-ratio:16/7;min-height:300px;background:#1c1a18;overflow:hidden}
+.murm canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.murm-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 24px 0;text-align:center;color:rgba(250,238,222,.55);font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;transition:opacity .4s;pointer-events:none}
+.murm.on .murm-hint{opacity:0}
+.murm-ctl{position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--ink)}
+.murm-ctl button{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
+.murm-ctl button:hover,.murm.on .murm-ctl button{background:var(--ink);color:#fff}
+.murm-ctl .i-stop,.murm.on .murm-ctl .i-play{display:none}.murm.on .murm-ctl .i-stop{display:block}
+.murm.busy .murm-ctl button{opacity:.5;cursor:progress}
+.murm-meta{display:grid;gap:2px;min-width:0}
+.murm-t{font-family:var(--helv);font-size:14px}
+.murm-s{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted)}
+.murm-vol{display:flex;align-items:center;gap:8px;margin-top:6px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+#murmVol{width:120px;height:2px;-webkit-appearance:none;appearance:none;background:linear-gradient(var(--ink),var(--ink)) 0/var(--p,70%) 100% no-repeat,var(--rule);outline:none;margin:6px 0}
+#murmVol::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:var(--ink);border:0;cursor:pointer}
+#murmVol::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--ink);border:0;cursor:pointer}
+@media (max-width:640px){.murm{aspect-ratio:auto;height:62vh;min-height:360px}.murm-ctl{left:12px;right:12px;top:12px}#murmVol{width:100%;flex:1}.murm-meta{flex:1}}
+.murm-txt{max-width:680px;margin:20px 0 0;font-size:15px;line-height:1.65;color:var(--ink-2)}
+.murm-fig{margin:clamp(56px,8vw,112px) 0 0}
+.murm-fig img{display:block;width:100%;height:auto}
+.murm-fig figcaption{margin-top:12px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted)}
+.hmsoon{padding:clamp(64px,10vw,140px) 0;text-align:center}
+.hmsoon h3{margin:0 0 10px;font-family:var(--display);font-weight:300;font-size:clamp(22px,2.4vw,30px)}
+.hmsoon p{margin:0;color:var(--muted);font-family:var(--mono);font-size:13px;letter-spacing:.06em}
+.listenbtn{display:inline-flex;align-items:center;gap:10px;margin-top:12px;padding:10px 16px;border:1px solid var(--ink);background:none;color:var(--ink);font-family:var(--helv);font-size:13px;letter-spacing:.02em;cursor:pointer;transition:background .25s,color .25s;text-align:left}
+.listenbtn:hover,.listenbtn.on{background:var(--ink);color:#fff}
+.aplayer{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;align-items:center;gap:18px;padding:12px max(16px,calc((100vw - 1376px)/2));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--rule)}
+.aplayer[hidden]{display:none}
+body.has-player:not(.murm-tab) footer{padding-bottom:84px}
+body.murm-tab .aplayer{display:none}
+.ap-toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.ap-toggle .i-play{display:none}.ap-toggle.paused .i-play{display:block}.ap-toggle.paused .i-pause{display:none}
+.ap-mid{display:grid;gap:6px;min-width:0}
+.ap-title{font-family:var(--helv);font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ap-sub{color:var(--muted)}
+#apSeek{width:100%;height:2px;-webkit-appearance:none;appearance:none;background:linear-gradient(var(--ink),var(--ink)) 0/var(--p,0%) 100% no-repeat,var(--rule);outline:none;margin:4px 0}
+#apSeek::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--ink);cursor:pointer}
+#apSeek::-moz-range-thumb{width:11px;height:11px;border:0;border-radius:50%;background:var(--ink);cursor:pointer}
+.ap-time{font:400 11.5px var(--mono);color:var(--muted);white-space:nowrap}
+.ap-close{border:0;background:none;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;padding:4px}
+.ap-close:hover{color:var(--ink)}
+@media (max-width:640px){.aplayer{grid-template-columns:auto minmax(0,1fr) auto;gap:12px}.ap-time{display:none}.ap-sub{display:none}}
 .wintro{margin:0 auto;justify-self:center;text-align:center;max-width:62ch;font-size:17px;line-height:1.8;color:var(--ink-2)}
 .wdesc{margin:14px 0 18px;max-width:62ch;font-size:17px;line-height:1.8;color:var(--ink-2)}
 .wced .cap{margin-top:14px}
@@ -390,7 +451,8 @@ section.pdetail{padding-block:28px clamp(56px,8vw,112px)}
 .mbced{max-width:760px}
 .mbced a{color:var(--accent)}
 .mbvid{display:inline-grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;margin-top:28px;padding:14px 22px 14px 18px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-family:var(--helv);font-size:17px;transition:background .25s,color .25s}
-.mbvid .pl{font-size:13px;grid-row:span 2}
+.mbvid .pl{font-size:13px;grid-row:span 2;display:flex;align-items:center}
+.ico{display:block}
 .mbvid .sub{grid-column:2;font:400 11px/1.4 var(--mono);letter-spacing:.04em;color:var(--muted);transition:color .25s}
 .mbvid:hover{background:var(--ink);color:#fff}.mbvid:hover .sub{color:rgba(255,255,255,.7)}
 .vidpage{background:#0b0b0c;color:#e9e6e1;min-height:calc(100svh - var(--top-h,61px));padding-block:clamp(20px,3vw,40px) clamp(48px,6vw,80px)}
@@ -503,6 +565,8 @@ footer{padding-block:28px 28px}
         <ul class="prlist small">
           <li><a class="pr" href="#materia-blanca"><span class="prt">White Matter</span><span class="pry">2026</span></a></li>
           <li><a class="pr" href="#archivo-volumetrico"><span class="prt">Volumetric Archive</span><span class="pry">2025–</span></a></li>
+          <li><a class="pr" href="#archivo-ineffable"><span class="prt">Ineffable</span><span class="pry">2025</span></a></li>
+          <li><a class="pr" href="#archivo-haptic-memory"><span class="prt">Haptic Memory</span><span class="pry">2023</span></a></li>
         </ul>
       </div>
     </div>
@@ -517,9 +581,9 @@ footer{padding-block:28px 28px}
         <dt>Title</dt><dd>Materia Blanca: la indescifrable criptografía de las cosas</dd>
         <dt>Publication</dt><dd><em>Index, revista de arte contemporáneo</em>, vol. 11, no. 21, pp. 187–195</dd>
         <dt>Year</dt><dd>2026</dd>
-        <dt>Links</dt><dd><a href="https://revistaindex.net/index.php/cav/article/view/715/722" target="_blank" rel="noopener">Read in Index ↗</a> · <a href="https://doi.org/10.26807/cav.v11i21.715" target="_blank" rel="noopener">DOI</a></dd>
+        <dt>Links</dt><dd><a href="https://revistaindex.net/index.php/cav/article/view/715/722" target="_blank" rel="noopener">Read in Index ↗︎</a> · <a href="https://doi.org/10.26807/cav.v11i21.715" target="_blank" rel="noopener">DOI</a></dd>
       </dl>
-      <a class="mbvid" href="#materia-blanca-video"><span class="pl">▶</span> Video<span class="sub">Materia Blanca — MME (Machine Mediated Events) · 4:57</span></a>
+      <a class="mbvid" href="#materia-blanca-video"><span class="pl"><svg class="ico" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M3 2v8l7-4z" fill="currentColor"/></svg></span> Video<span class="sub">Materia Blanca — MME (Machine Mediated Events) · 4:57</span></a>
       <div class="mbgal" aria-label="Figures">
         <figure><img src="img-mb-fig-2-1350.webp" srcset="img-mb-fig-2-1200.webp 1200w, img-mb-fig-2-1350.webp 1350w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="1350" height="759" decoding="async" alt="Pétalo granular (Granular Petal), Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 2</span> <em>Pétalo granular</em> (Granular Petal). Altered photograph, 2026.</figcaption></figure>
         <figure><img src="img-mb-fig-3-1350.webp" srcset="img-mb-fig-3-1200.webp 1200w, img-mb-fig-3-1350.webp 1350w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="1350" height="759" decoding="async" alt="Muyuyo, Lux Monsalve, 2026" loading="lazy"><figcaption><span class="mbn">Figure 3</span> <em>Muyuyo</em>. Altered photograph, 2026.</figcaption></figure>
@@ -534,6 +598,72 @@ footer{padding-block:28px 28px}
   </section>
 
 
+<!-- Ineffable: archive -->
+  <section class="block mbsec" data-page="archivo-ineffable">
+    <div class="wrap mb">
+      <div class="pback"><a href="#archivo">← Archive</a></div>
+      <div class="sec-head"><h2 class="thin">Ineffable</h2><div class="side"><p>Archive · 2025</p><button type="button" class="listenbtn" id="inefListen"><svg class="ico" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M3 2v8l7-4z" fill="currentColor"/></svg> Listen to interview with Richard Chuquimarca</button></div></div>
+      <audio id="inefAudio" preload="none" src="audio-ineffable-interview-richard-chuquimarca.mp3"></audio>
+      <nav class="hmtabs" aria-label="Ineffable sections"><ul>
+        <li><a href="#archivo-ineffable" data-tab="tree">The Tree of a Thousand Wonders</a></li>
+        <li><a href="#archivo-ineffable-murmullo" data-tab="murmullo">Murmullo</a></li>
+      </ul></nav>
+      <div class="hmpanel" data-panel="tree">
+      <div class="mbgal hmgal" aria-label="The Tree of a Thousand Wonders images">
+        <figure><img src="img-inef-01.jpg" srcset="img-inef-01-1280.jpg 1280w, img-inef-01.jpg 2576w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2576" height="1438" loading="lazy" decoding="async" alt="Ineffable — archive, image 1"><figcaption><span class="mbn">Figure 1</span></figcaption></figure>
+        <figure><img src="img-inef-02.jpg" srcset="img-inef-02-1280.jpg 1280w, img-inef-02.jpg 2576w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2576" height="1438" loading="lazy" decoding="async" alt="Ineffable — archive, image 2"><figcaption><span class="mbn">Figure 2</span></figcaption></figure>
+        <figure><img src="img-inef-03.jpg" srcset="img-inef-03-1280.jpg 1280w, img-inef-03.jpg 2576w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2576" height="1438" loading="lazy" decoding="async" alt="Ineffable — archive, image 3"><figcaption><span class="mbn">Figure 3</span></figcaption></figure>
+        <figure><img src="img-inef-04.jpg" srcset="img-inef-04-1280.jpg 1280w, img-inef-04.jpg 2576w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2576" height="1438" loading="lazy" decoding="async" alt="Ineffable — archive, image 4"><figcaption><span class="mbn">Figure 4</span></figcaption></figure>
+        <figure><img src="img-inef-05.jpg" srcset="img-inef-05-1280.jpg 1280w, img-inef-05.jpg 2576w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2576" height="1438" loading="lazy" decoding="async" alt="Ineffable — archive, image 5"><figcaption><span class="mbn">Figure 5</span></figcaption></figure>
+      </div>
+      </div>
+      <div class="hmpanel" data-panel="murmullo">
+        <div class="murm" id="murmSpec">
+          <canvas aria-label="Live spectrogram of the Murmullo generative patch" role="img"></canvas>
+          <div class="murm-hint" aria-hidden="true">Press play to hear and see the generative patch</div>
+          <div class="murm-ctl">
+            <button type="button" id="murmPlay" aria-label="Play"><svg class="i-play" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M3 2v8l7-4z" fill="currentColor"/></svg><svg class="i-stop" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 2.5h7v7h-7z" fill="currentColor"/></svg></button>
+            <div class="murm-meta"><span class="murm-t">Murmullo</span><span class="murm-s" id="murmState">Generative patch · RNBO</span>
+              <label class="murm-vol"><span>Vol</span><input type="range" id="murmVol" min="0" max="1" step="0.01" value="0.7" aria-label="Volume"></label></div>
+          </div>
+        </div>
+        <p class="murm-txt">A live processing system built in Max/MSP and RNBO that continuously modulates, in real time, the signal of a sample recorded with a LOM geophone from inside an agave plant during the harvesting of chawar. Its fundamental frequency lies below the threshold of human hearing: 77% of the energy is between 5 and 20&nbsp;Hz, almost all the rest (23%) between 20 and 60&nbsp;Hz, and there is practically nothing above 200&nbsp;Hz. On a mobile device, raise the volume and place your ear close to the speaker.</p>
+        <figure class="murm-fig"><img src="img-murmullo.jpg" width="1800" height="1199" loading="lazy" decoding="async" alt="Murmullo, 2025 — stainless steel sculpture with transducer on a woven fiber base, installation view"><figcaption><em>Murmullo</em>, 2025 — Installation view</figcaption></figure>
+      </div>
+      </div>
+    </div>
+  </section>
+<!-- Haptic Memory: archive -->
+  <section class="block mbsec" data-page="archivo-haptic-memory">
+    <div class="wrap mb">
+      <div class="pback"><a href="#archivo">← Archive</a></div>
+      <div class="sec-head"><h2 class="thin">Haptic Memory</h2><div class="side"><p>Archive · 2023</p></div></div>
+      <a class="mbvid hmlink" href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener"><span class="pl"><svg class="ico" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span> Read in Artishock<span class="sub">Espacios líquidos: políticas de la pantalla · 2023</span></a>
+      <nav class="hmtabs" aria-label="Haptic Memory sections"><ul>
+        <li><a href="#archivo-haptic-memory" data-tab="mullumica">Mullumica</a></li>
+        <li><a href="#archivo-haptic-memory-prints" data-tab="prints">Haptic Memory Fine Art Print Series</a></li>
+      </ul></nav>
+      <div class="hmpanel" data-panel="mullumica">
+      <div class="mbgal hmgal" aria-label="Mullumica images">
+        <figure><img src="img-hm-01-red-obsidian-mullumica.jpg" srcset="img-hm-01-red-obsidian-mullumica-1280.jpg 1280w, img-hm-01-red-obsidian-mullumica.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Red Obsidian — Mullumica. Obsidian lithologic reserve — 2023, Ecuador"><figcaption><span class="mbn">Figure 1</span> Red Obsidian — Mullumica. Obsidian lithologic reserve — 2023, Ecuador</figcaption></figure>
+        <figure><img src="img-hm-02-obsidian-walls-mullumica.jpg" srcset="img-hm-02-obsidian-walls-mullumica-1280.jpg 1280w, img-hm-02-obsidian-walls-mullumica.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Obsidian Walls — Mullumica. Obsidian lithologic reserve — 2023"><figcaption><span class="mbn">Figure 2</span> Obsidian Walls — Mullumica. Obsidian lithologic reserve — 2023</figcaption></figure>
+        <figure><img src="img-hm-03-fools-gold-pyrite-studio-process.jpg" srcset="img-hm-03-fools-gold-pyrite-studio-process-1280.jpg 1280w, img-hm-03-fools-gold-pyrite-studio-process.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Fool’s Gold — Lux Monsalve studio process. Pyrite — 2023, Ecuador"><figcaption><span class="mbn">Figure 3</span> Fool’s Gold — Lux Monsalve studio process. Pyrite — 2023, Ecuador</figcaption></figure>
+        <figure><img src="img-hm-04-studio-process-detail-1.jpg" srcset="img-hm-04-studio-process-detail-1-1280.jpg 1280w, img-hm-04-studio-process-detail-1.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Lux Monsalve studio process. Detail — 2023, Ecuador"><figcaption><span class="mbn">Figure 4</span> Lux Monsalve studio process. Detail — 2023, Ecuador</figcaption></figure>
+        <figure><img src="img-hm-05-studio-process-detail-2.jpg" srcset="img-hm-05-studio-process-detail-2-1280.jpg 1280w, img-hm-05-studio-process-detail-2.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Lux Monsalve studio process. Detail — 2023, Ecuador"><figcaption><span class="mbn">Figure 5</span> Lux Monsalve studio process. Detail — 2023, Ecuador</figcaption></figure>
+        <figure><img src="img-hm-06-studio-process-1.jpg" srcset="img-hm-06-studio-process-1-1280.jpg 1280w, img-hm-06-studio-process-1.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Lux Monsalve studio process — 2023, Ecuador"><figcaption><span class="mbn">Figure 6</span> Lux Monsalve studio process — 2023, Ecuador</figcaption></figure>
+        <figure><img src="img-hm-07-studio-process-2.jpg" srcset="img-hm-07-studio-process-2-1280.jpg 1280w, img-hm-07-studio-process-2.jpg 2560w" sizes="(min-width:1440px) 1376px, calc(100vw - 32px)" width="2560" height="1440" loading="lazy" decoding="async" alt="Lux Monsalve studio process — 2023, Ecuador"><figcaption><span class="mbn">Figure 7</span> Lux Monsalve studio process — 2023, Ecuador</figcaption></figure>
+      </div>
+      </div>
+      <div class="hmpanel" data-panel="prints">
+        <article class="hmprint">
+          <figure><img src="img-hmp-01-homunculo-2023.jpg" width="1080" height="1920" loading="lazy" decoding="async" alt="Homúnculo — Lux Monsalve, 2023. 3D photography, 110 × 200 cm"></figure>
+          <div class="hmpinfo"><span class="mbn">Fine Art Print Series · 01</span><h3>Homúnculo</h3>
+            <dl class="ced"><dt>Year</dt><dd>2023</dd><dt>Medium</dt><dd>3D photography</dd><dt>Dimensions</dt><dd>110 × 200 cm</dd></dl></div>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
 <!-- White Matter: video -->
   <section class="vidpage" data-page="materia-blanca-video">
     <div class="wrap">
@@ -541,7 +671,7 @@ footer{padding-block:28px 28px}
       <div class="vframe">
         <iframe id="mbVimeo" loading="lazy" data-src="https://player.vimeo.com/video/1237474403?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="White Matter — MME (Machine Mediated Events)"></iframe>
       </div>
-      <div class="vcap"><h2>Materia Blanca — MME (Machine Mediated Events)</h2><p>White Matter · Video · 2026 · 4:57 · <a href="https://vimeo.com/1237474403" target="_blank" rel="noopener">Watch on Vimeo ↗</a></p></div>
+      <div class="vcap"><h2>Materia Blanca — MME (Machine Mediated Events)</h2><p>White Matter · Video · 2026 · 4:57 · <a href="https://vimeo.com/1237474403" target="_blank" rel="noopener">Watch on Vimeo ↗︎</a></p></div>
     </div>
   </section>
 <!-- ===== ARCHIVO VOLUMÉTRICO — INICIO ===== -->
@@ -612,10 +742,10 @@ footer{padding-block:28px 28px}
       <ol class="exh">
         <li><span class="yr">2026</span><span class="nm">Reconocer</span><span class="ds">Group exhibition curated by Gabriela Moyano · Punto Rojo (la Galería), Quito · Work: <a href="#espora">胞子 / Espora</a></span></li>
         <li><span class="yr">2026</span><span class="nm">Del miedo profundo que ahuyenta la sombra</span><span class="ds">Group exhibition curated by Saskya Fun Sang · Estudio Cerón · Work: <a href="#mecanismos-blandos">Mecanismos blandos</a></span></li>
-        <li><span class="yr">2025</span><span class="nm">Ineffable<span class="tag">Solo</span></span><span class="ds">Solo exhibition · Q-Galería, Quito · <a href="https://qgaleria.com/inefable/" target="_blank" rel="noopener">qgaleria.com ↗</a></span></li>
+        <li><span class="yr">2025</span><span class="nm">Ineffable<span class="tag">Solo</span></span><span class="ds">Solo exhibition · Q-Galería, Quito · <a href="https://qgaleria.com/inefable/" target="_blank" rel="noopener">qgaleria.com ↗︎</a></span></li>
         <li><span class="yr">2025</span><span class="nm">Geopoéticas expandidas</span><span class="ds">Group exhibition · Arte Actual FLACSO, Quito</span></li>
         <li><span class="yr">2024</span><span class="nm">De cerca huele a metal mezclado, dicen que huele a planta</span><span class="ds">Sensory group exhibition of four emerging artists: Emilia Gonzales, Pedro Riofrío, Francisco Buerneo, Lux Monsalve · Punto Rojo (la Galería), Quito</span></li>
-        <li><span class="yr">2023</span><span class="nm">Haptic Memory<span class="tag">Third prize</span></span><span class="ds">Bienal Universitaria de Arte Multimedia (BUAM), curated by Doreen Ríos · Centro de Arte Contemporáneo de Quito and Museo del Cacao (MuCAO), Guayaquil · Review in <a href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener">Artishock ↗</a></span></li>
+        <li><span class="yr">2023</span><span class="nm">Haptic Memory<span class="tag">Third prize</span></span><span class="ds">Bienal Universitaria de Arte Multimedia (BUAM), curated by Doreen Ríos · Centro de Arte Contemporáneo de Quito and Museo del Cacao (MuCAO), Guayaquil · Review in <a href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener">Artishock ↗︎</a></span></li>
         <li><span class="yr">2022</span><span class="nm">Lucrecia Dalt — Isla Saturno</span><span class="ds">Interactive light and visuals installation · Teatro Nacional Sucre, Quito</span></li>
         <li><span class="yr">2021</span><span class="nm">Intimacy</span><span class="ds">Interactive installation in the group exhibition “BODY” · Hatch Art Gallery, Vancouver</span></li>
         <li><span class="yr">2020</span><span class="nm">Neblina</span><span class="ds">Live-processing installation with Fidel Eljuri and Zoroxxe · Media Agua, Quito</span></li>
@@ -624,9 +754,9 @@ footer{padding-block:28px 28px}
       </ol>
       <h3 class="cvh">Publications</h3>
       <ol class="exh">
-        <li><span class="yr">2026</span><span class="nm">White Matter</span><span class="ds">Visual essay “Materia Blanca: la indescifrable criptografía de las cosas” · <em>Index, revista de arte contemporáneo</em>, vol. 11, no. 21, pp. 187–195 · <a href="https://revistaindex.net/index.php/cav/article/view/715/722" target="_blank" rel="noopener">Read ↗</a> · <a href="https://doi.org/10.26807/cav.v11i21.715" target="_blank" rel="noopener">DOI</a></span></li>
-        <li><span class="yr">2025</span><span class="nm">Ineffable</span><span class="ds">Exhibition text · Q-Galería, Quito · <a href="https://qgaleria.com/inefable/" target="_blank" rel="noopener">Read ↗</a></span></li>
-        <li><span class="yr">2023</span><span class="nm">Espacios líquidos: políticas de la pantalla</span><span class="ds">Review featuring <em>Haptic Memory</em> · Artishock Revista · <a href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener">Read ↗</a></span></li>
+        <li><span class="yr">2026</span><span class="nm">White Matter</span><span class="ds">Visual essay “Materia Blanca: la indescifrable criptografía de las cosas” · <em>Index, revista de arte contemporáneo</em>, vol. 11, no. 21, pp. 187–195 · <a href="https://revistaindex.net/index.php/cav/article/view/715/722" target="_blank" rel="noopener">Read ↗︎</a> · <a href="https://doi.org/10.26807/cav.v11i21.715" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="yr">2025</span><span class="nm">Ineffable</span><span class="ds">Exhibition text · Q-Galería, Quito · <a href="https://qgaleria.com/inefable/" target="_blank" rel="noopener">Read ↗︎</a></span></li>
+        <li><span class="yr">2023</span><span class="nm">Espacios líquidos: políticas de la pantalla</span><span class="ds">Review featuring <em>Haptic Memory</em> · Artishock Revista · <a href="https://artishockrevista.com/2023/11/24/espacios-liquidos-politicas-de-la-pantalla/" target="_blank" rel="noopener">Read ↗︎</a></span></li>
         <li><span class="yr"></span><span class="nm">UFF Arte Itinerante</span><span class="ds">Publication</span></li>
         <li><span class="yr"></span><span class="nm">Geopoéticas Expandidas</span><span class="ds">Publication</span></li>
       </ol>
@@ -641,6 +771,12 @@ footer{padding-block:28px 28px}
   </section>
 </main>
 
+<div class="aplayer" id="aplayer" hidden>
+  <button type="button" class="ap-toggle" id="apToggle" aria-label="Pause"><svg class="i-play" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2v8l7-4z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M3 2h2v8H3zM7 2h2v8H7z" fill="currentColor"/></svg></button>
+  <div class="ap-mid"><span class="ap-title">Interview with Richard Chuquimarca <span class="ap-sub">· Ineffable</span></span><input type="range" id="apSeek" min="0" max="1000" value="0" step="1" aria-label="Seek"></div>
+  <span class="ap-time" id="apTime">0:00 / 11:07</span>
+  <button type="button" class="ap-close" id="apClose" aria-label="Close player">×</button>
+</div>
 <footer class="sig">
   <div class="wrap">
     <div class="sig-row">
@@ -664,11 +800,11 @@ const PROJECTS = [
     {id:"mecanismos-blandos", t:"Mecanismos blandos", y:2026, notes:{2:"A doll holds stories of care, fear, pain and uncertainty, all aspects inherent to human experience."}, intro:"Objects —archaeological pieces, writings and instruments— are portals for understanding hidden histories or realities lost to oblivion. A series of similarities between the myths and stylizations of the ancient objects of the East and Latin America reveals remarkable similarities between these two worlds.", desc:"<em>Mecanismos blandos</em> (Soft Mechanisms) draws a parallel between the Japanese practice of amigurumi and the Guatemalan worry doll as animist objects rooted in magical thinking. Antecedents of these practices can be traced to the Venus figurines of Valdivia, clay figures that have been linked to healing rituals, and Jōmon statues. The custom of making dolls for one’s children in times of hardship and suffering, a custom sustained above all by mothers, opens comforting spaces for vulnerability. The poetic gesture of shaping these figures in felt and materially decomposing their structure seeks the magical element that gives life to these inanimate beings. The piece proposes thinking of these objects as emotional prosthetics: soft bodies that accompany fragility and find a way to inhabit what cannot always be named.", tall:1, cover:"img-mecanismos-blandos-vertical.jpg", m:"Sheep’s wool felt", img:["img-mecanismos-blandos-detalle.jpg","img-mecanismos-blandos-pieza.jpg","img-mecanismos-blandos-figura.jpg"]},
   ]},
   {id:"inefable", t:"Ineffable", y:"2025", v:"Solo exhibition · Q-Galería, Quito", works:[
-    {id:"flor-de-agave", t:"Flor de agave", y:2025, intro:"<em>Flor de agave</em> is an assemblage of hand-fabricated agave paper with stainless steel sheet cutouts. This piece illustrates the belief that both the agave flower and chawarmishki — the sweet, nutritious sap produced by the plant — are the material manifestation of the plant’s spirit.", desc:"As it blossoms, the agave redirects the energy previously used to synthesize chawarmishki toward the development of its flowers; the bloom symbolizes the end of the xerophyte’s life cycle, as if announcing its own death. The stainless steel figure in the center of the composition derives from a 3D scan of the flower itself, translated into a two-dimensional silhouette. The use of stainless steel is a deliberate choice — it places the object within a contemporary material language, embracing ancestral traditions in a post-industrial and predominantly scientific-thinking context.", m:"Handmade agave paper and stainless steel", d:"240 × 180 cm", img:["img-flor-agave.jpg","img-flor-agave-detalle.jpg"]},
-    {id:"luz-liquida", t:"Luz líquida", y:2025, intro:"<em>Luz líquida</em> references a sophisticated poetic understanding of biological processes in the oral traditions of the Chuspiyaku culture.", desc:"“Liquid light” is the colloquial name for chawarmishki — the sap of the agave. Its flavor differs depending on whether the sap is synthesized during daylight or under moonlight. This variation deepens once the chawarmishki undergoes fermentation and transforms into a wine called warango. These nuances are experienced not only in taste but in the alcoholic stimulus — two different recipes distinguished by a single cosmic ingredient.", cover:"img-luz-liquida-puas.jpg", m:"Agave paper, agave spikes and stainless steel", d:"110 × 80 cm", img:["img-luz-liquida.jpg","img-luz-liquida-puas.jpg"]},
+    {id:"flor-de-agave", t:"Flor de agave", y:2025, about:"archivo-ineffable", aboutLabel:"About this piece", intro:"<em>Flor de agave</em> is an assemblage of hand-fabricated agave paper with stainless steel sheet cutouts. This piece illustrates the belief that both the agave flower and chawarmishki — the sweet, nutritious sap produced by the plant — are the material manifestation of the plant’s spirit.", desc:"As it blossoms, the agave redirects the energy previously used to synthesize chawarmishki toward the development of its flowers; the bloom symbolizes the end of the xerophyte’s life cycle, as if announcing its own death. The stainless steel figure in the center of the composition derives from a 3D scan of the flower itself, translated into a two-dimensional silhouette. The use of stainless steel is a deliberate choice — it places the object within a contemporary material language, embracing ancestral traditions in a post-industrial and predominantly scientific-thinking context.", m:"Handmade agave paper and stainless steel", d:"240 × 180 cm", img:["img-flor-agave.jpg","img-flor-agave-detalle.jpg"]},
+    {id:"luz-liquida", t:"Luz líquida", y:2025, about:"archivo-ineffable", aboutLabel:"About this piece", intro:"<em>Luz líquida</em> references a sophisticated poetic understanding of biological processes in the oral traditions of the Chuspiyaku culture.", desc:"“Liquid light” is the colloquial name for chawarmishki — the sap of the agave. Its flavor differs depending on whether the sap is synthesized during daylight or under moonlight. This variation deepens once the chawarmishki undergoes fermentation and transforms into a wine called warango. These nuances are experienced not only in taste but in the alcoholic stimulus — two different recipes distinguished by a single cosmic ingredient.", cover:"img-luz-liquida-puas.jpg", m:"Agave paper, agave spikes and stainless steel", d:"110 × 80 cm", img:["img-luz-liquida.jpg","img-luz-liquida-puas.jpg"]},
     {id:"murmullo", t:"Murmullo", y:2025, intro:"<em>Murmullo</em> is an installation that orients the viewer toward inhabiting space through an intimate, corporeal dialogue. This futuristic-looking artifact entices the audience to approach and come into contact.", desc:"It resembles the contour of a chair’s backrest, suggesting some form of dorsal engagement. A generative granular system built in Max/MSP and RNBO — programming languages that run on nodes — processes acoustic data collected from inside an agave plant. This real-time audio synthesis mechanism feeds into a transducer, which transforms the audio signals into vibration, inducing a haptic experience. The result is what he calls a cognitive blasphemy — a questioning of whether the very systems we use to measure or behold natural phenomena might widen the gap between raw sensory experience and the signals or codes we can decipher. In this reduction, entities are constrained to fragmented data points. Consider a forest translated into temperature gradients, soil pH and birdcall spectrograms: our intellectual grasp expands, yet many times the encounter loses its felt, bodily substance. His work does not mourn what is lost to measurement — it forces the intellectual, the mystical and the phenomenological into collision to articulate a broken language of his own.", tall:1, left:1, cover:"img-murmullo-vertical.jpg", m:"Installation: stainless steel tube, transducer, generative granular synthesis and agave sound samples", du:"Generative, no time limit", img:["img-murmullo-sala.jpg","img-murmullo-1.jpg","img-murmullo-2.jpg","img-murmullo.jpg"]},
     {id:"cartografias-divinas", t:"Cartografías divinas I–III", y:2025, intro:"This body of work stems from a series of reflections on vulnerability and uncertainty. It addresses global warming and human interventions in the environment as an intrinsic element of post-industrial life. After the forest fires in Quito in 2024, in desolate, charred landscapes, Monsalve finds in the pencos (agave plants), surrounded by ashes, a symbol of biological adaptation and cultural resistance that opens a space for fiction.", desc:"<em>Cartografías divinas</em> focuses on the territory of Chuspiyaku, seeking to raise questions about the fragility of the material and cultural memory of this place. The rhythm of modernity is aggressively modifying the periodic phases and cycles of life on earth, such as the blooming, hibernation, migration and propagation of living beings. This phenomenon leads us to see the world as if it were a new, unexplored territory. The artist highlights the epistemological junctures that arise from western narratives, creating maps and instruments that dismantle established conventions and paradigms, asking whether we need new models to navigate and make sense of the current human and environmental condition.", m:"Ash, charcoal, fire dust, sand, spines and stainless steel", d:"I: 75 × 170 cm · II and III: 70 × 40 cm", img:["img-cartografia-1.jpg","img-cartografia-2-3.jpg","img-cartografia-detalle.jpg","img-cartografia-detalle-2.jpg"]},
-    {id:"chawarquero", t:"Chawarquero", y:2025, intro:"<em>Chawarquero</em> is a word with two primordial meanings: it is the name of the heart of the agave plant from which a long stem grows upward, and also the name given to the person who harvests the chawarmishki and holds the knowledge of how to do it.", desc:"Agave leaves end in spikes pointing in all directions, which the Chuspiyaku cosmovision interprets as antennas — sending and receiving signals from different dimensions. The sculpture is made from an agave trunk; suspended above it is a hand-carved wooden object of unusual form, achieved through the repetition of the same gesture performed inside the agave’s base when collecting chawarmishki. It evokes an interdimensional receptor — a vessel for the immaterial truth that breathes in this interspecies communion, a wisdom that hides not in the plant alone but in the space of their quiet proximity.", m:"Wood, agave fibers and agave stem", d:"220 × 35 cm", img:["img-chawarquero.jpg","img-chawarquero-detalle.jpg"]},
+    {id:"chawarquero", t:"Chawarquero", y:2025, about:"archivo-ineffable", aboutLabel:"About this piece", intro:"<em>Chawarquero</em> is a word with two primordial meanings: it is the name of the heart of the agave plant from which a long stem grows upward, and also the name given to the person who harvests the chawarmishki and holds the knowledge of how to do it.", desc:"Agave leaves end in spikes pointing in all directions, which the Chuspiyaku cosmovision interprets as antennas — sending and receiving signals from different dimensions. The sculpture is made from an agave trunk; suspended above it is a hand-carved wooden object of unusual form, achieved through the repetition of the same gesture performed inside the agave’s base when collecting chawarmishki. It evokes an interdimensional receptor — a vessel for the immaterial truth that breathes in this interspecies communion, a wisdom that hides not in the plant alone but in the space of their quiet proximity.", m:"Wood, agave fibers and agave stem", d:"220 × 35 cm", img:["img-chawarquero.jpg","img-chawarquero-detalle.jpg"]},
     {id:"ceiba", t:"Ceiba", y:2025, m:"Cast aluminium", d:"90 × 3 cm", img:["img-landing-ceiba.jpg"]},
     {id:"priapo", t:"Príapo", y:2025, m:"Charcoal, ash, landscape fragments and steel", d:"120 × 170 cm", img:[]},
     {id:"caliz", t:"Cáliz", y:2025, m:"Forged steel", d:"15 × 33 cm", img:[]},
@@ -682,7 +818,7 @@ const PROJECTS = [
     {id:"crisalida-obra", t:"Crisálida", y:2023, m:"Sheep’s wool felt and medicinal plants (santa maría, arrayán, rue, cedrón)", d:"80 × 75 × 60 cm", img:["img-crisalida-2.jpg","img-crisalida-1.jpg","img-crisalida-3.jpg"]},
   ]},
   {id:"memoria-del-tacto", t:"Haptic Memory", y:"2023", v:"BUAM · Centro de Arte Contemporáneo, Quito — Third prize", works:[
-    {id:"memoria-del-tacto-obra", t:"Haptic Memory", y:2023, m:"Interactive installation: inkjet print, live processing video and generative sound", d:"Variable dimensions (print: 90 × 120 cm)", intro:"<em>Haptic Memory</em> emerges from an archive of 3D scans of human and non-human beings. Each piece documents different aspects of contemporary everyday life: affection, intimacy, the body and spirituality take on new forms as they are recorded by different technologies.", desc:"Media such as augmented reality and platforms such as social networks challenge traditional ways of understanding the world. These new epistemes manifest in culture and possibly even in the body. Just as painting, photography and cinema each brought about a perceptual shift in their time, new media create an expanded reality that entails an ontological change. Through a work that is activated without being touched, the series offers a way to visualize this transition toward a posthuman experience.", img:["img-memoria-tacto.jpg","img-memoria-objetos.jpg","img-memoria-publico.jpg"]},
+    {id:"memoria-del-tacto-obra", t:"Haptic Memory", y:2023, about:"archivo-haptic-memory", m:"Interactive installation: inkjet print, live processing video and generative sound", d:"Variable dimensions (print: 90 × 120 cm)", intro:"<em>Haptic Memory</em> emerges from an archive of 3D scans of human and non-human beings. Each piece documents different aspects of contemporary everyday life: affection, intimacy, the body and spirituality take on new forms as they are recorded by different technologies.", desc:"Media such as augmented reality and platforms such as social networks challenge traditional ways of understanding the world. These new epistemes manifest in culture and possibly even in the body. Just as painting, photography and cinema each brought about a perceptual shift in their time, new media create an expanded reality that entails an ontological change. Through a work that is activated without being touched, the series offers a way to visualize this transition toward a posthuman experience.", img:["img-memoria-tacto.jpg","img-memoria-objetos.jpg","img-memoria-publico.jpg"]},
   ]},
   {id:"instrumentos-inter-especie", t:"Instrumentos inter-especie", y:"2021", v:"Hatch Art Gallery, Vancouver", works:[
     {id:"instrumentos-inter-especie-obra", t:"Instrumentos inter-especie", y:2021, m:"3D-printed plaster and symbiotic colonies of bacteria and yeast", img:["img-interespecie-membrana.jpg","img-interespecie-yeso.jpg","img-interespecie-cultivo.jpg","img-interespecie-moldes.jpg","img-interespecie-cuenco.jpg"]},
@@ -721,7 +857,7 @@ function renderWork(pi,wi){
     <div class="pback">${back}</div>
     <header class="whead"><h2>${esc(w.t)}</h2><p class="cap">${esc(p.t)} · ${p.y}${single?' · '+esc(p.v):''}${single?'':` · ${wi+1} / ${p.works.length}`}</p></header>
     ${w.img.length?`<div class="wgal">${w.img.map((src,k)=>`<figure><img src="${src}" alt="${esc(w.t)}${k?', view '+(k+1):''}" loading="${k<2?'eager':'lazy'}"></figure>${k===0&&w.intro?`<p class="wintro">${w.intro}</p>`:''}${w.notes&&w.notes[k]?`<p class="wintro">${w.notes[k]}</p>`:''}`).join('')}</div>`:`<div class="wgal-empty"><span class="m">Photograph forthcoming</span></div>`}
-    <section class="wced"><h3>${esc(w.t)}</h3>${w.desc?`<p class="wdesc">${w.desc}</p>`:''}${cedHTML(w)}${single?'':`<p class="cap">${esc(p.v)}</p>`}</section>
+    <section class="wced"><h3>${esc(w.t)}</h3>${w.desc?`<p class="wdesc">${w.desc}</p>`:''}<div class="cedrow">${cedHTML(w)}${w.about?`<a class="aboutbtn" href="#${w.about}">${w.aboutLabel||'About this work'} <span aria-hidden="true">→</span></a>`:''}</div>${single?'':`<p class="cap">${esc(p.v)}</p>`}</section>
     ${single?'':`<nav class="pnav2">${prevL}${nextL}</nav>`}
   </div>`;
 }
@@ -742,7 +878,7 @@ let ni=0, timer;
 function show(i){
   ni=i; const n=NEWS[i];
   newsTag.textContent=n.tag; newsTitle.textContent=n.title; newsDesc.textContent=n.desc;
-  newsLink.href=n.link; newsLink.textContent=n.linkText+(n.link.startsWith('http')?' ↗':' →'); if(n.link.startsWith('http')){newsLink.target='_blank';newsLink.rel='noopener';}else{newsLink.removeAttribute('target');}
+  newsLink.href=n.link; newsLink.textContent=n.linkText+(n.link.startsWith('http')?' ↗︎':' →'); if(n.link.startsWith('http')){newsLink.target='_blank';newsLink.rel='noopener';}else{newsLink.removeAttribute('target');}
   newsCount.textContent=`${String(i+1).padStart(2,'0')} / ${String(NEWS.length).padStart(2,'0')}`;
   [...imgBox.children].forEach((im,k)=>im.classList.toggle('on',k===i));
   [...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i));
@@ -754,10 +890,137 @@ next.onclick=()=>{show((ni+1)%NEWS.length);restart();};
 show(0); restart();
 
 /* ---------- Páginas ---------- */
-const PAGES=['inicio','works','archivo','archivo-volumetrico','materia-blanca','materia-blanca-video','bio'];
-const PARENT={'archivo-volumetrico':'archivo','materia-blanca':'archivo','materia-blanca-video':'archivo',proyecto:'works'};
-const TITLES={inicio:'Lux Monsalve',works:'Works — Lux Monsalve',archivo:'Archive — Lux Monsalve','archivo-volumetrico':'Volumetric Archive — Lux Monsalve','materia-blanca':'White Matter — Lux Monsalve','materia-blanca-video':'Materia Blanca — MME (Machine Mediated Events) — Lux Monsalve',exhibiciones:'Exhibitions — Lux Monsalve',bio:'About — Lux Monsalve',contacto:'Contact — Lux Monsalve'};
+const SUBTABS={'archivo-haptic-memory-prints':['archivo-haptic-memory','prints','Haptic Memory Fine Art Print Series — Archive — Lux Monsalve'],'archivo-ineffable-murmullo':['archivo-ineffable','murmullo','Murmullo — Ineffable — Archive — Lux Monsalve']};
+const PAGES=['inicio','works','archivo','archivo-volumetrico','materia-blanca','materia-blanca-video','archivo-haptic-memory','archivo-ineffable','bio'];
+const PARENT={'archivo-volumetrico':'archivo','materia-blanca':'archivo','materia-blanca-video':'archivo','archivo-haptic-memory':'archivo','archivo-ineffable':'archivo',proyecto:'works'};
+const TITLES={'archivo-ineffable':'Ineffable — Archive — Lux Monsalve','archivo-haptic-memory':'Haptic Memory — Archive — Lux Monsalve',inicio:'Lux Monsalve',works:'Works — Lux Monsalve',archivo:'Archive — Lux Monsalve','archivo-volumetrico':'Volumetric Archive — Lux Monsalve','materia-blanca':'White Matter — Lux Monsalve','materia-blanca-video':'Materia Blanca — MME (Machine Mediated Events) — Lux Monsalve',exhibiciones:'Exhibitions — Lux Monsalve',bio:'About — Lux Monsalve',contacto:'Contact — Lux Monsalve'};
 const OLD={contacto:'bio',contact:'bio',exhibiciones:'bio',exhibitions:'bio',obra:'works',proyectos:'works',cartografias:'cartografias-divinas',antofila:'antofila-obra',crisalida:'crisalida-obra'};
+/* Ineffable interview player */
+(function(){
+  const a=document.getElementById('inefAudio'), btn=document.getElementById('inefListen'), bar=document.getElementById('aplayer');
+  if(!a||!btn||!bar) return;
+  const tg=document.getElementById('apToggle'), seek=document.getElementById('apSeek'), tm=document.getElementById('apTime'), cl=document.getElementById('apClose');
+  const fmt=t=>{t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0');};
+  let dragging=false;
+  const sync=()=>{const d=a.duration||667; if(!dragging){const p=(a.currentTime/d)*1000; seek.value=p; seek.style.setProperty('--p',(p/10)+'%');} tm.textContent=fmt(a.currentTime)+' / '+fmt(d);
+    tg.classList.toggle('paused',a.paused); tg.setAttribute('aria-label',a.paused?'Play':'Pause'); btn.classList.toggle('on',!a.paused); };
+  ['timeupdate','play','pause','loadedmetadata','ended'].forEach(ev=>a.addEventListener(ev,sync));
+  btn.addEventListener('click',()=>{ bar.hidden=false; document.body.classList.add('has-player'); if(a.paused) a.play().catch(()=>{}); else a.pause(); });
+  tg.addEventListener('click',()=>{ a.paused?a.play().catch(()=>{}):a.pause(); });
+  seek.addEventListener('input',()=>{ dragging=true; seek.style.setProperty('--p',(seek.value/10)+'%'); tm.textContent=fmt((seek.value/1000)*(a.duration||667))+' / '+fmt(a.duration||667); });
+  seek.addEventListener('change',()=>{ a.currentTime=(seek.value/1000)*(a.duration||667); dragging=false; });
+  cl.addEventListener('click',()=>{ a.pause(); bar.hidden=true; document.body.classList.remove('has-player'); });
+  addEventListener('hashchange',()=>{ if(!location.hash.startsWith('#archivo-ineffable')){ a.pause(); bar.hidden=true; document.body.classList.remove('has-player'); } });
+})();
+/* Murmullo: RNBO generative patch + spectrogram */
+(function(){
+  const box=document.getElementById('murmSpec'); if(!box) return;
+  const cv=box.querySelector('canvas'), ctx2=cv.getContext('2d',{alpha:false});
+  const btn=document.getElementById('murmPlay'), vol=document.getElementById('murmVol'), st=document.getElementById('murmState');
+  const PATCH='rnbo-murmullo-patch.export.json', DEPS=[{id:'lux',file:'audio-murmullo-13hz.wav'}], VER='1.3.4';
+  let ac=null, dev=null, gain=null, an=null, data=null, raf=0, running=false, loading=false;
+  function size(){ const r=box.getBoundingClientRect(), d=Math.min(devicePixelRatio||1,2);
+    const w=Math.round(r.width*d), h=Math.round(r.height*d);
+    if(!w||!h) return false;
+    if(cv.width!==w||cv.height!==h){ cv.width=w; cv.height=h; ctx2.fillStyle='#1c1a18'; ctx2.fillRect(0,0,w,h); blank(); } return true; }
+  if(window.ResizeObserver) new ResizeObserver(size).observe(box); else addEventListener('resize',size);
+  function loadScript(src){ return new Promise((ok,ko)=>{ const s=document.createElement('script'); s.src=src; s.onload=ok; s.onerror=ko; document.head.appendChild(s); }); }
+  async function getRNBO(){
+    if(window.RNBO) return window.RNBO;
+    for(const u of ['https://c74-public.nyc3.digitaloceanspaces.com/rnbo/'+VER+'/rnbo.min.js','https://cdn.jsdelivr.net/npm/@rnbo/js@'+VER+'/dist/rnbo.min.js']){
+      try{ await loadScript(u); if(window.RNBO) return window.RNBO; }catch(e){} }
+    try{ const m=await import('https://cdn.jsdelivr.net/npm/@rnbo/js@'+VER+'/+esm'); return m.createDevice?m:m.default; }catch(e){}
+    throw new Error('RNBO library unavailable');
+  }
+  /* colour: dark ground → accent → warm white */
+  const LUT=[]; (function(){ const st=[[0,[28,26,24]],[.35,[60,59,57]],[.6,[130,129,127]],[.82,[205,204,202]],[1,[255,255,255]]];
+    for(let i=0;i<256;i++){ const t=i/255; let k=0; while(k<st.length-2&&t>st[k+1][0]) k++;
+      const [t0,c0]=st[k],[t1,c1]=st[k+1], f=(t-t0)/(t1-t0); LUT.push(`rgb(${c0.map((v,j)=>Math.round(v+(c1[j]-v)*f)).join(',')})`); } })();
+  const NP=180; let sm=new Float32Array(NP);
+  const FMIN=8, FMAX=16000, DBLO=-100, DBHI=-20, ctl=box.querySelector('.murm-ctl');
+  function geom(w,h){ const d=Math.min(devicePixelRatio||1,2), cb=(ctl.offsetTop+ctl.offsetHeight)*d;
+    return {d, top:Math.max(h*.12,cb+24*d), base:h-30*d, left:0, right:w-52*d}; }
+  function axes(w,h,g){
+    const {d,top,base,right}=g, L=Math.log(FMAX/FMIN);
+    ctx2.font=`${10*d}px "Roboto Mono",ui-monospace,monospace`; ctx2.textBaseline='middle';
+    ctx2.lineWidth=1; ctx2.strokeStyle='rgba(255,255,255,.07)'; ctx2.fillStyle='rgba(255,255,255,.5)';
+    for(let db=DBLO;db<=DBHI;db+=20){ const y=Math.round(base-(db-DBLO)/(DBHI-DBLO)*(base-top))+.5;
+      ctx2.textAlign='left'; ctx2.fillText(db+' dB',right+8*d,y); }
+    const ticks=(w/d<560)?[10,100,1000,10000]:[10,20,50,100,200,500,1000,2000,5000,10000];
+    ctx2.textAlign='center'; ctx2.textBaseline='alphabetic';
+    for(const f of ticks){ const x=Math.round(Math.log(f/FMIN)/L*right)+.5;
+      ctx2.fillText(f>=1000?(f/1000)+'k':String(f),x,h-10*d); }
+    ctx2.textAlign='right'; ctx2.fillText('Hz',w-8*d,h-10*d);
+  }
+  function blank(){ if(!cv.width||!cv.height) return; ctx2.fillStyle='#1c1a18'; ctx2.fillRect(0,0,cv.width,cv.height); axes(cv.width,cv.height,geom(cv.width,cv.height)); }
+  function draw(){
+    raf=requestAnimationFrame(draw); if(!an||!cv.width||!cv.height) return;
+    an.getFloatFrequencyData(data);
+    const w=cv.width, h=cv.height, g=geom(w,h), d=g.d;
+    const ny=ac.sampleRate/2, fmin=FMIN, fmax=Math.min(FMAX,ny), L=Math.log(fmax/fmin), n=data.length, lo=DBLO, hi=DBHI;
+    let pk=-Infinity, pf=0;
+    for(let i=1;i<n;i++){ const f=i/n*ny; if(f<fmin||f>fmax) continue; if(data[i]>pk){ pk=data[i]; pf=f; } }
+    for(let k=0;k<NP;k++){
+      const f0=fmin*Math.exp(L*k/NP), f1=fmin*Math.exp(L*(k+1)/NP);
+      let i0=Math.floor(f0/ny*n), i1=Math.ceil(f1/ny*n), m=-Infinity;
+      if(i1-i0<3){ const fi=Math.sqrt(f0*f1)/ny*n, j=Math.min(n-2,Math.floor(fi)), t=fi-j, a0=Math.max(lo,data[j]), a1=Math.max(lo,data[j+1]); m=a0+(a1-a0)*(t*t*(3-2*t)); }
+      else for(let i=i0;i<i1&&i<n;i++) if(data[i]>m) m=data[i];
+      const v=Number.isFinite(m)?Math.max(0,Math.min(1,(m-lo)/(hi-lo))):0;
+      sm[k]+= (v-sm[k])*(v>sm[k]?.35:.08);
+    }
+    ctx2.fillStyle='rgba(28,26,24,.32)'; ctx2.fillRect(0,0,w,h);
+    /* clear label gutters fully so text stays crisp */
+    ctx2.fillStyle='#1c1a18'; ctx2.fillRect(g.right,0,w-g.right,h); ctx2.fillRect(0,g.base,w,h-g.base);
+    axes(w,h,g);
+    const top=g.top, base=g.base, X=k=>k/(NP-1)*g.right, Y=k=>base-sm[k]*(base-top);
+    ctx2.save(); ctx2.beginPath(); ctx2.rect(0,0,g.right,base); ctx2.clip();
+    ctx2.beginPath(); ctx2.moveTo(0,Y(0));
+    for(let k=1;k<NP-1;k++){ const xc=(X(k)+X(k+1))/2, yc=(Y(k)+Y(k+1))/2; ctx2.quadraticCurveTo(X(k),Y(k),xc,yc); }
+    ctx2.lineTo(g.right,Y(NP-1));
+    ctx2.lineJoin='round'; ctx2.lineCap='round';
+    ctx2.strokeStyle='rgba(255,255,255,.18)'; ctx2.lineWidth=6*d; ctx2.stroke();
+    ctx2.strokeStyle='#fff'; ctx2.lineWidth=1.5*d; ctx2.stroke(); ctx2.restore();
+    if(Number.isFinite(pk)&&pk>lo){
+      if(!draw.pf){ draw.pf=pf; draw.pk=pk; } draw.pf+=(pf-draw.pf)*.15; draw.pk+=(pk-draw.pk)*.15;
+      const t=`Peak  ${draw.pf<1000?Math.round(draw.pf)+' Hz':(draw.pf/1000).toFixed(2)+' kHz'}  ·  ${Math.round(draw.pk)} dB`;
+      ctx2.font=`${11*d}px "Roboto Mono",ui-monospace,monospace`; ctx2.textAlign='right'; ctx2.textBaseline='top';
+      ctx2.fillStyle='#1c1a18'; const tw=ctx2.measureText(t).width; ctx2.fillRect(g.right-tw-14*d,10*d,tw+12*d,20*d);
+      ctx2.fillStyle='rgba(255,255,255,.85)'; ctx2.fillText(t,g.right-8*d,14*d);
+    }
+  }
+  async function start(){
+    if(loading) return; loading=true; st.textContent='Loading…'; box.classList.add('busy');
+    try{
+      if(!ac){
+        const R=await getRNBO(), AC=window.AudioContext||window.webkitAudioContext;
+        ac=new AC(); await ac.resume();
+        const patcher=await (await fetch(PATCH)).json();
+        dev=await R.createDevice({context:ac,patcher});
+        if(patcher.presets&&patcher.presets.length){ const p=patcher.presets.find(x=>x.name==='Default')||patcher.presets[0]; dev.setPreset(p.preset); }
+        await dev.loadDataBufferDependencies(DEPS);
+        /* the patch processes its signal inputs (in~ 1/2): feed it the 13 Hz recording in a loop */
+        const ab=await ac.decodeAudioData(await (await fetch(DEPS[0].file)).arrayBuffer());
+        const src=ac.createBufferSource(); src.buffer=ab; src.loop=true; src.connect(dev.node); src.start();
+        const nOut=dev.numOutputChannels||(patcher.desc&&patcher.desc.numOutputChannels)||2;
+        gain=ac.createGain(); gain.gain.value=+vol.value;
+        an=ac.createAnalyser(); an.fftSize=8192; an.smoothingTimeConstant=.5; an.minDecibels=-100; an.maxDecibels=-20;
+        data=new Float32Array(an.frequencyBinCount);
+        const sp=ac.createChannelSplitter(Math.max(2,nOut)), mg=ac.createChannelMerger(2);
+        dev.node.connect(sp); sp.connect(mg,0,0); sp.connect(mg,nOut>1?1:0,1);
+        mg.connect(gain); gain.connect(an); gain.connect(ac.destination);
+      } else await ac.resume();
+      running=true; box.classList.add('on'); btn.setAttribute('aria-label','Stop'); st.textContent='Generative patch · live';
+      cancelAnimationFrame(raf); draw();
+    }catch(e){ console.error(e); st.textContent='Audio could not start in this browser'; }
+    loading=false; box.classList.remove('busy');
+  }
+  function stop(){ if(ac) ac.suspend(); running=false; box.classList.remove('on'); btn.setAttribute('aria-label','Play'); st.textContent='Generative patch · RNBO'; cancelAnimationFrame(raf); }
+  btn.addEventListener('click',()=>running?stop():start());
+  vol.addEventListener('input',()=>{ vol.style.setProperty('--p',(vol.value*100)+'%'); if(gain) gain.gain.setTargetAtTime(+vol.value,ac.currentTime,.03); });
+  vol.style.setProperty('--p',(vol.value*100)+'%');
+  window.murmStop=stop;
+  addEventListener('hashchange',()=>{ if(running&&location.hash!=='#archivo-ineffable-murmullo') stop(); });
+})();
 /* White Matter video: Vimeo first, local copy as fallback */
 let vimeoOK=false, vimeoTimer=0;
 addEventListener('message',e=>{ if(/^https:\/\/player\.vimeo\.com$/.test(e.origin)){ vimeoOK=true; clearTimeout(vimeoTimer); } });
@@ -777,6 +1040,13 @@ function route(){
     if(wi>=0){ renderWork(pi,wi); title=PROJECTS[pi].works[wi].t+' — Lux Monsalve'; }
     else { renderProject(pi); title=PROJECTS[pi].t+' — Lux Monsalve'; } }
   else if(PAGES.includes(h)) page=h;
+  else if(SUBTABS[h]){ page=SUBTABS[h][0]; title=SUBTABS[h][2]; }
+  const sec0=document.querySelector(`[data-page="${page}"]`);
+  if(sec0&&sec0.querySelector('.hmtabs')){
+    const tab=(SUBTABS[h]&&SUBTABS[h][1])||sec0.querySelector('.hmtabs a').dataset.tab;
+    sec0.querySelectorAll('.hmpanel').forEach(x=>x.classList.toggle('on',x.dataset.panel===tab));
+    sec0.querySelectorAll('.hmtabs a').forEach(a=>a.dataset.tab===tab?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')); }
+  document.body.classList.toggle('murm-tab',h==='archivo-ineffable-murmullo');
   document.querySelectorAll('[data-page]').forEach(sec=>sec.classList.toggle('on',sec.dataset.page===page));
   const navPage=PARENT[page]||page;
   document.querySelectorAll('.nav a').forEach(a=>{a.getAttribute('href')==='#'+navPage?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');});
