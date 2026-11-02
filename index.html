@@ -325,6 +325,9 @@ blockquote.quote{margin:0}
 .prt{font-family:var(--helv);font-weight:300;font-size:clamp(26px,3.6vw,52px);line-height:1.1;letter-spacing:-.02em;transition:color .2s ease,transform .25s ease}
 .pry{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .pr:hover .prt{color:var(--accent);transform:translateX(.2em)}
+.pr-off{cursor:default}.pr-off .prt,.pr-off:hover .prt{color:var(--muted);transform:none}
+.inproc{display:inline-block;margin-right:14px;padding:3px 8px;border:1px solid var(--rule);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+#newsLink.off{color:var(--muted);text-decoration:none;cursor:default;pointer-events:none}
 .prlist.small .prt{font-size:clamp(22px,2.6vw,36px)}
 /* detalle de proyecto */
 .pdetail .pback,.mb .pback{display:block;margin-bottom:28px}
@@ -566,7 +569,7 @@ footer{padding-block:28px 28px}
         <div class="eyebrow">Research archives</div>
         <ul class="prlist small">
           <li><a class="pr" href="#materia-blanca"><span class="prt">White Matter</span><span class="pry">2026</span></a></li>
-          <li><a class="pr" href="#archivo-volumetrico"><span class="prt">Volumetric Archive</span><span class="pry">2025–</span></a></li>
+          <li><div class="pr pr-off" aria-disabled="true"><span class="prt">Volumetric Archive</span><span class="pry"><span class="inproc">In process</span>2025–</span></div></li>
           <li><a class="pr" href="#archivo-ineffable"><span class="prt">Ineffable</span><span class="pry">2025</span></a></li>
           <li><a class="pr" href="#archivo-haptic-memory"><span class="prt">Haptic Memory</span><span class="pry">2023</span></a></li>
         </ul>
@@ -885,7 +888,7 @@ function renderWork(pi,wi){
 const NEWS=[
   {tag:"Publications · 2026", title:"White Matter in Index", desc:"“Materia Blanca: la indescifrable criptografía de las cosas”, a visual essay in Index, revista de arte contemporáneo, vol. 11, no. 21.", img:"img-materia-blanca.jpg", link:"#materia-blanca", linkText:"View the archive"},
   {tag:"Solo exhibition · 2025", title:"Ineffable", desc:"Handmade agave paper, stainless steel and sound from inside the plant. Q-Galería, Quito.", img:"img-inefable-aluminio.jpg", link:"#inefable", linkText:"View the project"},
-  {tag:"Digital archive", title:"Volumetric Archive", desc:"Life forms, mineral and chemical formations scanned in 3D. Move through the space and get close to each object.", img:"img-archivo-tardigrado.jpg", fit:"contain", link:"#archivo-volumetrico", linkText:"Enter the archive"},
+  {tag:"Digital archive", title:"Volumetric Archive", desc:"Life forms, mineral and chemical formations scanned in 3D. Move through the space and get close to each object.", img:"img-archivo-tardigrado.jpg", fit:"contain", link:"", linkText:"In process", off:1},
 ];
 const imgBox=document.getElementById('newsImg'), dots=document.getElementById('dots');
 NEWS.forEach((n,i)=>{
@@ -897,7 +900,7 @@ let ni=0, timer;
 function show(i){
   ni=i; const n=NEWS[i];
   newsTag.textContent=n.tag; newsTitle.textContent=n.title; newsDesc.textContent=n.desc;
-  newsLink.href=n.link; newsLink.textContent=n.linkText+(n.link.startsWith('http')?' ↗︎':' →'); if(n.link.startsWith('http')){newsLink.target='_blank';newsLink.rel='noopener';}else{newsLink.removeAttribute('target');}
+  newsLink.classList.toggle('off',!!n.off); if(n.off){ newsLink.removeAttribute('href'); newsLink.textContent=n.linkText; } else { newsLink.href=n.link; newsLink.textContent=n.linkText+(n.link.startsWith('http')?' ↗︎':' →'); } if(n.link.startsWith('http')){newsLink.target='_blank';newsLink.rel='noopener';}else{newsLink.removeAttribute('target');}
   newsCount.textContent=`${String(i+1).padStart(2,'0')} / ${String(NEWS.length).padStart(2,'0')}`;
   [...imgBox.children].forEach((im,k)=>im.classList.toggle('on',k===i));
   [...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i));
@@ -913,7 +916,7 @@ const SUBTABS={'materia-blanca-process':['materia-blanca','process','Process —
 const PAGES=['inicio','works','archivo','archivo-volumetrico','materia-blanca','materia-blanca-video','archivo-haptic-memory','archivo-ineffable','bio'];
 const PARENT={'archivo-volumetrico':'archivo','materia-blanca':'archivo','materia-blanca-video':'archivo','archivo-haptic-memory':'archivo','archivo-ineffable':'archivo',proyecto:'works'};
 const TITLES={'archivo-ineffable':'Ineffable — Archive — Lux Monsalve','archivo-haptic-memory':'Haptic Memory — Archive — Lux Monsalve',inicio:'Lux Monsalve',works:'Works — Lux Monsalve',archivo:'Archive — Lux Monsalve','archivo-volumetrico':'Volumetric Archive — Lux Monsalve','materia-blanca':'White Matter — Lux Monsalve','materia-blanca-video':'Materia Blanca — MME (Machine Mediated Events) — Lux Monsalve',exhibiciones:'Exhibitions — Lux Monsalve',bio:'About — Lux Monsalve',contacto:'Contact — Lux Monsalve'};
-const OLD={contacto:'bio',contact:'bio',exhibiciones:'bio',exhibitions:'bio',obra:'works',proyectos:'works',cartografias:'cartografias-divinas',antofila:'antofila-obra',crisalida:'crisalida-obra'};
+const OLD={'archivo-volumetrico':'archivo',contacto:'bio',contact:'bio',exhibiciones:'bio',exhibitions:'bio',obra:'works',proyectos:'works',cartografias:'cartografias-divinas',antofila:'antofila-obra',crisalida:'crisalida-obra'};
 /* Ineffable interview player */
 (function(){
   const a=document.getElementById('inefAudio'), btn=document.getElementById('inefListen'), bar=document.getElementById('aplayer');
